@@ -1,5 +1,6 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
-  programs.home-manager = {
+  programs.firefox = {
     enable = true;
+    package = pkgs.firefox-bin;
   };
 }

@@ -14,7 +14,7 @@
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     # Home manager
-    home-manager.url = "github:nix-community/home-manager/master";
+    home-manager.url = "github:utkarshgupta137/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # Add any other flake you might need
@@ -100,6 +100,17 @@
             ./home/nixos/home.nix
           ];
         };
+
+        # Available through "home-manager --flake '.#utkarsh@utkarsh-mbp' switch"
+        "utkarsh@utkarsh-mbp" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.aarch64-darwin; # Home-manager requires 'pkgs' instance
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [
+            # > Our main home-manager configuration file <
+            ./home/nix-darwin/home.nix
+          ];
+        };
       };
     };
 }
+

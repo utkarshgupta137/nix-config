@@ -1,5 +1,6 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
-  programs.home-manager = {
+  programs.navi = {
     enable = true;
+    enableZshIntegration = true;
   };
 }
