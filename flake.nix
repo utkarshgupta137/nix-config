@@ -9,6 +9,10 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-22.11";
     # Also see the 'stable-packages' overlay at 'overlays/default.nix'.
 
+    # Nix darwin
+    darwin.url = "github:LnL7/nix-darwin";
+    darwin.inputs.nixpkgs.follows = "nixpkgs";
+
     # Home manager
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -21,7 +25,7 @@
     # nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, darwin, home-manager, ... }@inputs:
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
@@ -51,6 +55,9 @@
       # Reusable nixos modules you might want to export
       # These are usually stuff you would upstream into nixpkgs
       nixosModules = import ./modules/nixos;
+      # Reusable nix-darwin modules you might want to export
+      # These are usually stuff you would upstream into nix-darwin
+      nixDarwinModules = import ./modules/nix-darwin;
       # Reusable home-manager modules you might want to export
       # These are usually stuff you would upstream into home-manager
       homeManagerModules = import ./modules/home-manager;
@@ -64,6 +71,19 @@
           modules = [
             # > Our main nixos configuration file <
             ./hosts/nixos/configuration.nix
+          ];
+        };
+      };
+
+      # Darwin configuration entrypoint
+      darwinConfigurations = {
+        # Available through "darwin-rebuild --flake '.#utkarsh-mbp' switch"
+        utkarsh-mbp = darwin.lib.darwinSystem {
+          system = "aarch64-darwin";
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            # > Our main nix-darwin configuration file <
+            ./hosts/nix-darwin/configuration.nix
           ];
         };
       };
