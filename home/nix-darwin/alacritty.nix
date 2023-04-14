@@ -1,6 +1,7 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   programs.alacritty = {
     enable = true;
+    package = pkgs.alacritty-vivid;
     settings = {
       window.option_as_alt = "Both";
 
