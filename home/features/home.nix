@@ -11,6 +11,7 @@
       pinentry_mac
 
       awscli2
+      cmake
       grafana-loki
       influxdb2-cli
       localstack
@@ -18,6 +19,7 @@
       # vector
 
       rustup
+      dprint
       fd
       just
       ripgrep
