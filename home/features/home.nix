@@ -16,6 +16,7 @@
       influxdb2-cli
       localstack
       neovim-remote
+      sqlite
       # vector
 
       rustup
