@@ -3,7 +3,6 @@
 
 
 
-    # ./features/atuin.nix
     ./features/bat.nix
     ./features/bottom.nix
     ./features/broot.nix
