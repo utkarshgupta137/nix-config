@@ -2,10 +2,10 @@
   programs.alacritty = {
     enable = true;
 
-    package = pkgs.alacritty-vivid;
+    package = lib.mkIf (pkgs.stdenv.isDarwin) pkgs.alacritty-vivid;
 
     settings = {
-      window.option_as_alt = "Both";
+      window.option_as_alt = lib.mkIf (pkgs.stdenv.isDarwin) "Both";
 
       scrolling.history = 100000;
 
@@ -14,7 +14,7 @@
         bold.style = "SemiBold";
         italic.style = "Medium Italic";
 
-        size = 13;
+        size = if (pkgs.stdenv.isDarwin) then 13 else 6;
 
         builtin_box_drawing = true;
       };
@@ -26,10 +26,14 @@
       mouse.hide_when_typing = true;
 
       key_bindings = [
+        { key = "T"; mods = "Command"; action = "CreateNewWindow"; }
+      ] ++ lib.optionals (pkgs.stdenv.isDarwin) [
         { key = "Q"; mods = "Command"; action = "None"; }
         { key = "W"; mods = "Command"; action = "None"; }
-        { key = "T"; mods = "Command"; action = "CreateNewWindow"; }
         { key = "N"; mods = "Command"; action = "SpawnNewInstance"; }
+      ] ++ lib.optionals (pkgs.stdenv.isLinux) [
+        { key = "C"; mods = "Command"; action = "Copy"; }
+        { key = "V"; mods = "Command"; action = "Paste"; }
       ];
     };
   };

@@ -9,8 +9,9 @@
 
     # You can also split up your configuration and import pieces of it here:
     ../common.nix
-    ../services/karabiner.nix
     ../services/homebrew.nix
+    ../services/karabiner.nix
+    ../services/networking.nix
     # ../services/yabai.nix
     ./system.nix
   ];

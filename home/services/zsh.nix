@@ -1,17 +1,22 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   home = {
-    sessionVariables = {
-      XDG_BIN_HOME = "${config.home.homeDirectory}/.local/bin";
-      XDG_RUNTIME_DIR = "${config.home.homeDirectory}/.local/run";
+    sessionVariables = lib.mkMerge [
+      {
+        XDG_BIN_HOME = "${config.home.homeDirectory}/.local/bin";
 
-      TIME_STYLE = "long-iso";
-    };
+        TIME_STYLE = "long-iso";
+      }
+
+      (lib.optionalAttrs (pkgs.stdenv.isDarwin) {
+        XDG_RUNTIME_DIR = "${config.home.homeDirectory}/.local/run";
+      })
+    ];
   };
 
   programs.zsh = {
     enable = true;
 
-    envExtra = ''
+    envExtra = lib.mkIf (pkgs.stdenv.isDarwin) ''
       source "$HOME/tensorfox/.zshenv"
     '';
 
@@ -28,7 +33,7 @@
         mkdir -p /tmp/copy;
         cp -rp "$@" /tmp/copy;
         BASE=$(cd /tmp/copy && tar -cz * | base64);
-        echo "echo '$BASE' | base64 -d | tar -xz; history -d \$(history 1)";
+        echo "echo '$BASE' | base64 -d | tar -xz; # history -d \$(history 1)";
       }
 
       export LS_COLORS="$(vivid generate one-dark)"

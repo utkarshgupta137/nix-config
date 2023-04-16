@@ -11,7 +11,6 @@
       influxdb2-cli
       localstack
       neovim-remote
-      pinentry_mac
       sqlite
 
       rustup
@@ -36,11 +35,18 @@
       cargo-machete
       cargo-nextest
       cargo-update
-    ];
+    ] ++ lib.optionals (pkgs.stdenv.isDarwin) [
+      pinentry_mac
+    ] ++ lib.optionals (pkgs.stdenv.isLinux) [
+      efibootmgr
+      playerctl
+      xclip
 
-    shellAliases = {
-      l = "${pkgs.lsd}/bin/lsd -al";
-    };
+      discord
+      gnome.gnome-calculator
+      gnome.gnome-screenshot
+      spotify
+    ];
 
     sessionPath = [
       "${config.home.sessionVariables.CARGO_HOME}/bin"
@@ -54,8 +60,20 @@
       RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
     };
 
+    shellAliases = {
+      l = "${pkgs.lsd}/bin/lsd -al";
+    };
+
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
     stateVersion = "22.11";
+  };
+
+  home.pointerCursor = lib.mkIf (pkgs.stdenv.isLinux) {
+    package = pkgs.apple-cursor;
+    name = "macOS-Monterey";
+
+    gtk.enable = true;
+    x11.enable = true;
   };
 
   xdg.configFile.".ripgreprc" = {

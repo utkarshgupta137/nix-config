@@ -1,10 +1,25 @@
-# This is just an example, you should generate yours with nixos-generate-config and put it in here.
-{
-  fileSystems."/" = {
-    device = "/dev/sda1";
-    fsType = "ext4";
+{ inputs, outputs, lib, config, pkgs, ... }: {
+  boot = {
+    initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usbhid" "usb_storage" "sd_mod" ];
+    kernelModules = [ "kvm-amd" ];
   };
 
-  # Set your system kind (needed for flakes)
-  nixpkgs.hostPlatform = "x86_64-linux";
+  fileSystems = {
+    "/" =
+      {
+        device = "/dev/disk/by-uuid/76ee1a6f-051a-4ceb-8dec-a51829b1396d";
+        fsType = "ext4";
+      };
+
+    "/boot/efi" =
+      {
+        device = "/dev/disk/by-uuid/724E-1159";
+        fsType = "vfat";
+      };
+  };
+
+  hardware = {
+    cpu.amd.updateMicrocode = true;
+    enableAllFirmware = true;
+  };
 }

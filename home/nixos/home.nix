@@ -12,17 +12,24 @@
 
     # You can also split up your configuration and import pieces of it here:
     ../common.nix
+    ../programs/blueman-applet.nix
+    ../programs/dunst.nix
+    ../programs/feh.nix
+    ../programs/firefox.nix
+    ../programs/gnome-keyring.nix
+    ../programs/network-manager-applet.nix
+    ../programs/picom.nix
+    ../programs/playerctl.nix
+    ../programs/polybar.nix
+    ../programs/rofi.nix
+    ../services/xsession.nix
   ];
 
-  # TODO: Set your username
   home = {
-    username = "your-username";
-    homeDirectory = "/home/your-username";
+    username = "utkarsh";
+    homeDirectory = "/home/utkarsh";
   };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
-
-  # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  home.stateVersion = "22.11";
 }
