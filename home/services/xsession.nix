@@ -135,6 +135,7 @@
 
           startup = [
             { command = cfg.config.terminal; }
+            { command = "${pkgs.polybarFull}/bin/polybar &"; always = true; notification = false; }
           ];
 
           terminal = "${pkgs.alacritty}/bin/alacritty";
@@ -144,3 +145,4 @@
     };
   };
 }
+

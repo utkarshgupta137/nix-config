@@ -1,11 +1,6 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
-  services.polybar = {
-    enable = true;
-
-    package = pkgs.polybarFull;
-
-    script = "polybar &";
-
-    settings = { };
+  xdg.configFile."polybar" = {
+    source = ../../assets/polybar;
+    recursive = true;
   };
 }
