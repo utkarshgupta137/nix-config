@@ -3,9 +3,11 @@
     enable = true;
 
     compression = true;
+
     controlMaster = "auto";
     controlPath = "~/.local/run/ssh/master-%r@%h:%p";
     controlPersist = "10m";
+
     serverAliveInterval = 60;
 
     matchBlocks = {

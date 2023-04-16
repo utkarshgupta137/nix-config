@@ -1,27 +1,10 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
-  # environment.pathsToLink = [ "/share/zsh" ];
-
   home = {
-    sessionPath = [
-      "${config.home.sessionVariables.CARGO_HOME}/bin"
-    ];
-
     sessionVariables = {
       XDG_BIN_HOME = "${config.home.homeDirectory}/.local/bin";
       XDG_RUNTIME_DIR = "${config.home.homeDirectory}/.local/run";
 
-      CARGO_HOME = "${config.xdg.dataHome}/cargo";
-      LESSHISTFILE = "${config.xdg.stateHome}/less/history";
-      NPM_CONFIG_CACHE = "${config.xdg.cacheHome}/npm";
-      RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
-      TERMINFO = "${config.xdg.dataHome}/terminfo";
-      TERMINFO_DIRS = "${config.xdg.dataHome}/terminfo:/usr/share/terminfo";
-
       TIME_STYLE = "long-iso";
-    };
-
-    shellAliases = {
-      l = "${pkgs.lsd}/bin/lsd -al";
     };
   };
 
@@ -119,5 +102,7 @@
     };
   };
 
-  xdg.enable = true;
+  xdg = {
+    enable = true;
+  };
 }

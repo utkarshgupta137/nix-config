@@ -1,6 +1,7 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   programs.gitui = {
     enable = true;
+
     keyConfig = ''
       (
           open_help: Some(( code: F(1), modifiers: ( bits: 0,),)),
@@ -36,6 +37,7 @@
           stage_unstage_item: Some(( code: Char(' '), modifiers: ( bits: 0,),)),
       )
     '';
+
     theme = ''
       (
           selected_tab: Reset,

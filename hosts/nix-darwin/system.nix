@@ -1,7 +1,11 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
-  security.pam.enableSudoTouchIdAuth = true;
+  networking = {
+    hostName = "utkarsh-mbp";
+    localHostName = "utkarsh-mbp";
+    computerName = "utkarsh-mbp";
+  };
 
-  services.karabiner-elements.enable = true;
+  security.pam.enableSudoTouchIdAuth = true;
 
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog

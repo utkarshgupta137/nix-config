@@ -1,6 +1,7 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   programs.git = {
     enable = true;
+
     delta = {
       enable = true;
       options = {
@@ -16,6 +17,7 @@
         # plus-style = syntax "#005217";
       };
     };
+
     extraConfig = {
       core = {
         editor = "nvim";
@@ -53,6 +55,7 @@
         missingCommitsCheck = "warn";
       };
     };
+
     includes = [
       {
         condition = "gitdir:~/tensorfox/";
@@ -63,10 +66,12 @@
         };
       }
     ];
+
     signing = {
       key = null;
       signByDefault = true;
     };
+
     userEmail = "utkarshgupta137@gmail.com";
     userName = "Utkarsh Gupta";
   };

@@ -1,9 +1,18 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
-    ./features/fonts.nix
-    ./features/networking.nix
-    ./features/nix.nix
-    ./features/nixpkgs.nix
-    ./features/zsh.nix
+
+
+
+
+
+
+    ./services/fonts.nix
+    # ./services/homebrew.nix
+    # ./services/karabiner.nix
+    ./services/networking.nix
+    ./services/nix.nix
+    ./services/nixpkgs.nix
+    # ./services/yabai.nix
+    ./services/zsh.nix
   ];
 }

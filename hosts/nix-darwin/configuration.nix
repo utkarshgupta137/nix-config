@@ -9,14 +9,9 @@
 
     # You can also split up your configuration and import pieces of it here:
     ../common.nix
-    ./homebrew.nix
+    ../services/karabiner.nix
+    ../services/homebrew.nix
+    # ../services/yabai.nix
     ./system.nix
-    # ./wm.nix
   ];
-
-  networking = {
-    hostName = "utkarsh-mbp";
-    localHostName = "utkarsh-mbp";
-    computerName = "utkarsh-mbp";
-  };
 }

@@ -1,6 +1,7 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   programs.bottom = {
     enable = true;
+
     settings = {
       flags = {
         tree = true;

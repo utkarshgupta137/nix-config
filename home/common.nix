@@ -3,32 +3,36 @@
 
 
 
-    ./features/bat.nix
-    ./features/bottom.nix
-    ./features/broot.nix
-    # ./features/firefox.nix
-    ./features/git.nix
-    ./features/gitui.nix
-    ./features/gpg.nix
-    ./features/helix.nix
-    ./features/home-manager.nix
-    ./features/home.nix
-    ./features/htop.nix
-    ./features/jq.nix
-    ./features/lazygit.nix
-    ./features/lsd.nix
-    # ./features/mcfly.nix
-    ./features/navi.nix
-    ./features/neovim.nix
-    ./features/nix-index.nix
-    ./features/nix.nix
-    ./features/nixpkgs.nix
-    # ./features/nushell.nix
-    ./features/ssh.nix
-    ./features/starship.nix
-    ./features/tealdeer.nix
-    ./features/zellij.nix
-    ./features/zoxide.nix
-    ./features/zsh.nix
+
+
+    ./programs/bat.nix
+    ./programs/bottom.nix
+    ./programs/broot.nix
+    # ./programs/firefox.nix
+    ./programs/gitui.nix
+    ./programs/helix.nix
+    ./programs/htop.nix
+    ./programs/jq.nix
+    ./programs/lazygit.nix
+    ./programs/lsd.nix
+    # ./programs/mcfly.nix
+    ./programs/navi.nix
+    ./programs/neovim.nix
+    # ./programs/nushell.nix
+    ./programs/starship.nix
+    ./programs/tealdeer.nix
+    ./programs/zellij.nix
+    ./programs/zoxide.nix
+
+    ./services/git.nix
+    ./services/gpg.nix
+    ./services/home-manager.nix
+    ./services/home.nix
+    # ./services/karabiner.nix
+    ./services/nix-index.nix
+    ./services/nix.nix
+    ./services/nixpkgs.nix
+    ./services/ssh.nix
+    ./services/zsh.nix
   ];
 }
