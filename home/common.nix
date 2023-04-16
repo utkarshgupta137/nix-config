@@ -17,7 +17,7 @@
     ./features/jq.nix
     ./features/lazygit.nix
     ./features/lsd.nix
-    ./features/mcfly.nix
+    # ./features/mcfly.nix
     ./features/navi.nix
     ./features/neovim.nix
     ./features/nix-index.nix

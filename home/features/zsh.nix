@@ -51,6 +51,7 @@
       export LS_COLORS="$(vivid generate one-dark)"
 
       # eval "$(github-copilot-cli alias -- "$0")"
+      eval "$(mcfly init zsh)"
     '';
 
     dotDir = ".config/zsh";
