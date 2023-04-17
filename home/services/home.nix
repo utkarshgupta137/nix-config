@@ -13,7 +13,6 @@
       neovim-remote
       sqlite
 
-      rustup
       dprint
       fd
       just
@@ -27,6 +26,7 @@
       vivid
       xcp
 
+      rustup
       cargo-audit
       # cargo-cranky
       cargo-criterion
@@ -39,6 +39,7 @@
       pinentry_mac
     ] ++ lib.optionals (pkgs.stdenv.isLinux) [
       efibootmgr
+      gcc
       playerctl
       xclip
 
