@@ -1,26 +1,22 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
-  environment = lib.mkMerge [
-    {
-      pathsToLink = [ "/libexec" "/share/zsh" ];
+  environment = {
+    pathsToLink = [ "/libexec" "/share/zsh" ];
 
-      profiles = [
-        "\$HOME/.local/state/nix/profile"
-      ];
+    profiles = [
+      "\$HOME/.local/state/nix/profile"
+    ];
 
-      shells = [ pkgs.zsh ];
+    shells = [ pkgs.zsh ];
 
-      variables = {
-        ZDOTDIR = "\$HOME/.config/zsh";
-      };
-    }
-
-    # (lib.optionalAttrs (pkgs.stdenv.isLinux) {
-    #   localBinInPath = true;
-    # })
-  ];
+    variables = {
+      ZDOTDIR = "\$HOME/.config/zsh";
+    };
+  };
 
   programs.zsh = {
     enable = true;
-    enableBashCompletion = true;
+    enableCompletion = false;
+    enableBashCompletion = false;
+    promptInit = "";
   };
 }
