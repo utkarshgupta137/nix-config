@@ -45,6 +45,7 @@ read_only = " "
 
 [directory.substitutions]
 galleon = "tfx"
+controller = "ctl"
 
 [docker_context]
 format = "\\[[$symbol$context]($style)\\]"
