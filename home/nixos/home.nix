@@ -22,6 +22,7 @@
     ../programs/playerctl.nix
     ../programs/polybar.nix
     ../programs/rofi.nix
+    ../services/screen-locker.nix
     ../services/xsession.nix
   ];
 
