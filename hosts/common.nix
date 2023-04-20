@@ -25,6 +25,7 @@
     # ./services/networking.nix
     ./services/nix.nix
     ./services/nixpkgs.nix
+    # ./services/terminfo.nix
     # ./services/time.nix
     # ./services/xserver.nix
     # ./services/yabai.nix
