@@ -28,7 +28,6 @@
     # ./services/terminfo.nix
     # ./services/time.nix
     # ./services/xserver.nix
-    # ./services/yabai.nix
     ./services/zsh.nix
   ];
 }

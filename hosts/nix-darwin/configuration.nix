@@ -13,7 +13,6 @@
     ../services/karabiner.nix
     ../services/networking.nix
     ../services/terminfo.nix
-    # ../services/yabai.nix
     ./system.nix
   ];
 }
