@@ -1,0 +1,39 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+[directory.substitutions]
+controller = "ctl"
+galleon = "tfx"
+
+[git_commit]
+tag_disabled = false
+
+[git_metrics]
+disabled = false
+format = '\[([+$added]($added_style) )([-$deleted]($deleted_style))\]'
+
+[git_status]
+ignore_submodules = true
+
+[memory_usage]
+disabled = false
+threshold = 85
+
+[nix_shell]
+heuristic = true
+
+[shlvl]
+disabled = false
+threshold = 3
+
+[status]
+disabled = false
+format = '\[[$symbol$status]($style)\]'
+map_symbol = true
+pipestatus = true
+
+[sudo]
+disabled = false
+
+[time]
+disabled = false
+time_format = "%R"

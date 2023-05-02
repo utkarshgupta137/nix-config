@@ -1,4 +1,4 @@
-add_newline = false
+"$schema" = "https://starship.rs/config-schema.json"
 
 [aws]
 format = "\\[[$symbol($profile)(\\($region\\))(\\[$duration\\])]($style)\\]"
@@ -44,8 +44,8 @@ format = "\\[[$symbol($version)]($style)\\]"
 read_only = " "
 
 [directory.substitutions]
-galleon = "tfx"
 controller = "ctl"
+galleon = "tfx"
 
 [docker_context]
 format = "\\[[$symbol$context]($style)\\]"
@@ -153,6 +153,7 @@ symbol = " "
 
 [nix_shell]
 format = "\\[[$symbol$state( \\($name\\))]($style)\\]"
+heuristic = true
 symbol = " "
 
 [nodejs]
@@ -172,10 +173,12 @@ format = "\\[[$symbol$cloud(\\($project\\))]($style)\\]"
 format = "\\[[$symbol]($style)\\]"
 
 [os.symbols]
+Alpaquita = " "
 Alpine = " "
 Amazon = " "
 Android = " "
 Arch = " "
+Artix = " "
 CentOS = " "
 Debian = " "
 DragonFly = " "
@@ -188,6 +191,7 @@ Gentoo = " "
 HardenedBSD = "ﲊ "
 Illumos = " "
 Linux = " "
+Mabox = " "
 Macos = " "
 Manjaro = " "
 Mariner = " "
@@ -254,12 +258,23 @@ symbol = " "
 format = "\\[[$symbol($version)]($style)\\]"
 symbol = " "
 
+[shlvl]
+disabled = false
+threshold = 3
+
 [spack]
 format = "\\[[$symbol$environment]($style)\\]"
 symbol = "🅢 "
 
+[status]
+disabled = false
+format = "\\[[$symbol$status]($style)\\]"
+map_symbol = true
+pipestatus = true
+
 [sudo]
-format = "\\[[as $symbol]\\]"
+disabled = false
+format = "\\[[as $symbol]($style)\\]"
 
 [swift]
 format = "\\[[$symbol($version)]($style)\\]"
