@@ -1,0 +1,18 @@
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:compact-bar"
+        }
+        children
+    }
+
+    tab name="nvim" cwd=".config/nvim"
+
+    tab name="user" cwd=".config/nvim/lua/user" focus=true
+
+    tab name="astrocommunity" cwd="utkarsh/solo/astrocommunity"
+
+    tab name="share" cwd=".local/share/nvim"
+
+    tab name="state" cwd=".local/state/nvim"
+}
