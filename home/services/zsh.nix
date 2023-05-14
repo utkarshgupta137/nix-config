@@ -18,8 +18,6 @@
 
     envExtra = lib.mkIf (pkgs.stdenv.isDarwin) ''
       source "$HOME/tensorfox/.zshenv"
-
-      ulimit -n 4096
     '';
 
     profileExtra = ''
