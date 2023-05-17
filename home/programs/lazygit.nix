@@ -24,6 +24,8 @@
       };
 
       quitOnTopLevelReturn = true;
+      notARepository = "skip";
+      promptToReturnFromSubprocess = false;
     };
   };
 
