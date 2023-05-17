@@ -142,6 +142,7 @@ keybinds clear-defaults=true {
     }
     shared_except "locked" {
         bind "Alt z" { SwitchToMode "Locked"; }
+        bind "Alt Z" { Write 27 122; }
         bind "Alt g" {
             Run "lazygit" {
                 close_on_exit true
