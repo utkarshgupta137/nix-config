@@ -11,10 +11,6 @@
     # example = prev.example.overrideAttrs (oldAttrs: rec {
     # ...
     # });
-
-    alacritty-vivid = prev.alacritty.overrideAttrs (oldAttrs: {
-      patches = (oldAttrs.patches or [ ]) ++ [ ./alacritty-vivid.diff ];
-    });
   };
 
   # When applied, the stable nixpkgs set (declared in the flake inputs) will

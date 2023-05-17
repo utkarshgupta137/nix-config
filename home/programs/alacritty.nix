@@ -2,8 +2,6 @@
   programs.alacritty = {
     enable = true;
 
-    package = lib.mkIf (pkgs.stdenv.isDarwin) pkgs.alacritty-vivid;
-
     settings = {
       window.option_as_alt = lib.mkIf (pkgs.stdenv.isDarwin) "Both";
 
