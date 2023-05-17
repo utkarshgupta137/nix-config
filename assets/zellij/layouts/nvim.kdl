@@ -6,11 +6,9 @@ layout {
         children
     }
 
-    tab name="nvim" cwd=".config/nvim"
-
-    tab name="user" cwd=".config/nvim/lua/user" focus=true
-
     tab name="astrocommunity" cwd="utkarsh/solo/astrocommunity"
+
+    tab name="config" cwd=".config/nvim" focus=true
 
     tab name="share" cwd=".local/share/nvim"
 
