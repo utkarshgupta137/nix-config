@@ -10,7 +10,7 @@
     withRuby = true;
   };
 
-  xdg.configFile."nvim/lua/user/plugins/sqlite.lua".text = ''
+  xdg.configFile."nvim/lua/plugins/sqlite.lua".text = ''
     vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.dylib'
 
     return {}
