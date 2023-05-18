@@ -19,8 +19,8 @@
       };
 
       os = {
-        editCommand = "~/.config/lazygit/nvim.sh";
-        editCommandTemplate = "{{editor}} {{filename}} {{line}}";
+        edit = "~/.config/lazygit/nvim.sh {{filename}}";
+        editInTerminal = true;
       };
 
       quitOnTopLevelReturn = true;

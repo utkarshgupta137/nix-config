@@ -1,10 +1,7 @@
 #!/bin/sh
 
-filename=${1}
-line=${2}
-
-if [ -n "${NVIM_LISTEN_ADDRESS+x}" ] || [ -n "${NVIM+x}" ]; then
-	nvr -O "${filename}" -c "${line}"
+if [ "${NVIM_LISTEN_ADDRESS+x}" != "" ] || [ "${NVIM+x}" != "" ]; then
+	nvr --remote-wait "$1"
 else
-	nvim "${filename}" -c "${line}"
+	nvim "$1"
 fi
