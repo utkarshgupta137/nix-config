@@ -49,10 +49,6 @@
       spotify
     ];
 
-    sessionPath = [
-      "${config.home.sessionVariables.CARGO_HOME}/bin"
-    ];
-
     sessionVariables = {
       CARGO_HOME = "${config.xdg.dataHome}/cargo";
       LESSHISTFILE = "${config.xdg.stateHome}/less/history";

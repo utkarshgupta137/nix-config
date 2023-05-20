@@ -37,6 +37,7 @@
       }
 
       export LS_COLORS="$(vivid generate one-dark)"
+      export PATH="$CARGO_HOME/bin:$PATH"
 
       # eval "$(github-copilot-cli alias -- "$0")"
       eval "$(mcfly init zsh)"
