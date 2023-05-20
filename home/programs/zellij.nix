@@ -3,8 +3,8 @@
     enable = true;
   };
 
-  xdg.configFile."zellij" = {
-    source = ../../assets/zellij;
-    recursive = true;
-  };
+  # xdg.configFile."zellij" = {
+  #   source = ../../assets/zellij;
+  #   recursive = true;
+  # };
 }
