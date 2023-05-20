@@ -65,11 +65,12 @@
       l = "lsd -al";
       nixdarwin = "darwin-rebuild --flake ~/utkarsh/nix/config switch";
       nixhome = "home-manager --flake ~/utkarsh/nix/config switch";
+      n = "nvim";
       nv = "nvim";
       j = "zellij";
-      jnix = "zellij -l nix a -c nix";
+      jnx = "zellij -l nix a -c nix";
       jnv = "zellij -l nvim a -c nvim";
-      jtfx = "zellij -l tfx a -c tfx";
+      jfx = "zellij -l tfx a -c tfx";
     };
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
