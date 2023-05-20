@@ -20,6 +20,7 @@
       "discord"
       "docker"
       "firefox"
+      "google-drive"
       "iina"
       "itsycal"
       "linear-linear"
