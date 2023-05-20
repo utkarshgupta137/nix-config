@@ -24,16 +24,16 @@
       mouse.hide_when_typing = true;
 
       key_bindings = [
-        { key = "Key1"; mods = "Command"; chars = "\\x1b!"; }
-        { key = "Key2"; mods = "Command"; chars = "\\x1b@"; }
-        { key = "Key3"; mods = "Command"; chars = "\\x1b#"; }
-        { key = "Key4"; mods = "Command"; chars = "\\x1b$"; }
-        { key = "Key5"; mods = "Command"; chars = "\\x1b%"; }
-        { key = "Key6"; mods = "Command"; chars = "\\x1b^"; }
-        { key = "Key7"; mods = "Command"; chars = "\\x1b&"; }
-        { key = "Key8"; mods = "Command"; chars = "\\x1b*"; }
-        { key = "Key9"; mods = "Command"; chars = "\\x1b("; }
-        { key = "Key0"; mods = "Command"; chars = "\\x1b)"; }
+        { key = "Key1"; mods = "Control"; chars = "\\x1b!"; }
+        { key = "Key2"; mods = "Control"; chars = "\\x1b@"; }
+        { key = "Key3"; mods = "Control"; chars = "\\x1b#"; }
+        { key = "Key4"; mods = "Control"; chars = "\\x1b$"; }
+        { key = "Key5"; mods = "Control"; chars = "\\x1b%"; }
+        { key = "Key6"; mods = "Control"; chars = "\\x1b^"; }
+        { key = "Key7"; mods = "Control"; chars = "\\x1b&"; }
+        { key = "Key8"; mods = "Control"; chars = "\\x1b*"; }
+        { key = "Key9"; mods = "Control"; chars = "\\x1b("; }
+        { key = "Key0"; mods = "Control"; chars = "\\x1b)"; }
         { key = "T"; mods = "Command"; chars = "\\x1bT"; }
         { key = "N"; mods = "Command"; chars = "\\x1bN"; }
         { key = "T"; mods = "Command|Shift"; action = "CreateNewWindow"; }
