@@ -2,15 +2,17 @@
   programs.helix = {
     enable = true;
 
-    languages = [
-      {
-        name = "rust";
-        language-server = {
-          command = "rustup";
-          args = [ "run" "stable" "rust-analyzer" ];
-        };
-      }
-    ];
+    languages = {
+      language = [
+        {
+          name = "rust";
+          language-server = {
+            command = "rustup";
+            args = [ "run" "stable" "rust-analyzer" ];
+          };
+        }
+      ];
+    };
 
     settings = {
       theme = "github_dark_dimmed";
