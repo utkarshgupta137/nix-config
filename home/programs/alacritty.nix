@@ -34,15 +34,22 @@
         { key = "Key8"; mods = "Control"; chars = "\\x1b*"; }
         { key = "Key9"; mods = "Control"; chars = "\\x1b("; }
         { key = "Key0"; mods = "Control"; chars = "\\x1b)"; }
+
         { key = "T"; mods = "Command"; chars = "\\x1bT"; }
         { key = "N"; mods = "Command"; chars = "\\x1bN"; }
         { key = "T"; mods = "Command|Shift"; action = "CreateNewWindow"; }
         { key = "N"; mods = "Command|Shift"; action = "SpawnNewInstance"; }
+
+        # Ref: https://stackoverflow.com/questions/16359878/how-to-map-shift-enter
+        { key = "Return"; mods = "Shift"; chars = "\\x1b[13;2u"; }
+        { key = "Return"; mods = "Control"; chars = "\\x1b[13;5u"; }
+        { key = "Return"; mods = "Control|Shift"; chars = "\\x1b[13;6u"; }
       ] ++ lib.optionals (pkgs.stdenv.isDarwin) [
         { key = "LBracket"; mods = "Command"; chars = "\\x1bj"; }
         { key = "RBracket"; mods = "Command"; chars = "\\x1bk"; }
         { key = "LBracket"; mods = "Command|Shift"; chars = "\\x1bh"; }
         { key = "RBracket"; mods = "Command|Shift"; chars = "\\x1bl"; }
+
         { key = "Q"; mods = "Command"; action = "None"; }
         { key = "W"; mods = "Command"; action = "None"; }
       ] ++ lib.optionals (pkgs.stdenv.isLinux) [
