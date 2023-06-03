@@ -8,6 +8,7 @@
     ];
 
     brews = [
+      "showkey"
       "filosottile/musl-cross/musl-cross"
       "vectordotdev/brew/vector"
     ];
@@ -23,6 +24,7 @@
       "google-drive"
       "iina"
       "itsycal"
+      "kitty"
       "linear-linear"
       "notion"
       "postman"
@@ -33,6 +35,7 @@
       "spotify"
       "steam"
       "via"
+      "wezterm"
       "whatsapp"
     ];
 
