@@ -28,6 +28,7 @@
     # ./programs/picom.nix
     # ./programs/playerctl.nix
     # ./programs/polybar.nix
+    ./programs/ripgrep.nix
     # ./programs/rofi.nix
     ./programs/starship.nix
     ./programs/tealdeer.nix

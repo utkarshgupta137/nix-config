@@ -16,7 +16,6 @@
       dprint
       fd
       just
-      ripgrep
       rm-improved
       sd
       tokei
@@ -53,7 +52,6 @@
       CARGO_HOME = "${config.xdg.dataHome}/cargo";
       LESSHISTFILE = "${config.xdg.stateHome}/less/history";
       NPM_CONFIG_CACHE = "${config.xdg.cacheHome}/npm";
-      RIPGREP_CONFIG_PATH = "${config.xdg.configHome}/.ripgreprc";
       RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
     };
 
@@ -82,9 +80,5 @@
 
     gtk.enable = true;
     x11.enable = true;
-  };
-
-  xdg.configFile.".ripgreprc" = {
-    source = ../../assets/.ripgreprc;
   };
 }
