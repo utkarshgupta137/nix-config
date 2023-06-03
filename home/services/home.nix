@@ -64,6 +64,7 @@
       n = "nvim";
       nv = "nvim";
       j = "zellij";
+      ja = "zellij -l alacritty a -c alacritty";
       jcli = "zellij -l cli a -c cli";
       jj = "zellij -l zellij a -c zellij";
       jnx = "zellij -l nix a -c nix";

@@ -1,0 +1,14 @@
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:compact-bar"
+        }
+        children
+    }
+
+    tab name="alacritty" cwd="utkarsh/rust/alacritty" focus=true
+
+    tab name="vte" cwd="utkarsh/rust/vte"
+
+    tab name="cargo" cwd="utkarsh/rust/alacritty"
+}
