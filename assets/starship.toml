@@ -85,6 +85,7 @@ tag_disabled = false
 [git_metrics]
 disabled = false
 format = "\\[([+$added]($added_style) )([-$deleted]($deleted_style))\\]"
+ignore_submodules = true
 
 [git_status]
 format = "([\\[$all_status$ahead_behind\\]]($style))"
@@ -261,6 +262,9 @@ symbol = " "
 [shlvl]
 disabled = false
 threshold = 3
+
+[solidity]
+format = "\\[[$symbol($version)]($style)\\]"
 
 [spack]
 format = "\\[[$symbol$environment]($style)\\]"
