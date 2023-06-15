@@ -24,6 +24,7 @@
       "google-drive"
       "iina"
       "itsycal"
+      "keyboardcleantool"
       "kitty"
       "linear-linear"
       "notion"
