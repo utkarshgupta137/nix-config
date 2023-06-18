@@ -6,7 +6,7 @@ layout {
         children
     }
 
-    tab name="zellij" cwd="utkarsh/rust/zellij" focus=true
+    tab name="zellij" cwd="~/utkarsh/rust/zellij" focus=true
 
-    tab name="cargo" cwd="utkarsh/rust/zellij"
+    tab name="cargo" cwd="~/utkarsh/rust/zellij"
 }

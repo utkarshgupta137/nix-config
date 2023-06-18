@@ -6,11 +6,11 @@ layout {
         children
     }
 
-    tab name="astrocommunity" cwd="utkarsh/solo/astrocommunity"
+    tab name="astrocommunity" cwd="~/utkarsh/solo/astrocommunity"
 
-    tab name="config" cwd=".config/nvim" focus=true
+    tab name="config" cwd="~/.config/nvim" focus=true
 
-    tab name="share" cwd=".local/share/nvim"
+    tab name="share" cwd="~/.local/share/nvim"
 
-    tab name="state" cwd=".local/state/nvim"
+    tab name="state" cwd="~/.local/state/nvim"
 }

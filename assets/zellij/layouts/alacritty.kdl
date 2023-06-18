@@ -6,9 +6,9 @@ layout {
         children
     }
 
-    tab name="alacritty" cwd="utkarsh/rust/alacritty" focus=true
+    tab name="alacritty" cwd="~/utkarsh/rust/alacritty" focus=true
 
-    tab name="vte" cwd="utkarsh/rust/vte"
+    tab name="vte" cwd="~/utkarsh/rust/vte"
 
-    tab name="cargo" cwd="utkarsh/rust/alacritty"
+    tab name="cargo" cwd="~/utkarsh/rust/alacritty"
 }

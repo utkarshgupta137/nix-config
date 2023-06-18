@@ -6,9 +6,9 @@ layout {
         children
     }
 
-    tab name="etcetera" cwd="utkarsh/rust/etcetera" focus=true
+    tab name="etcetera" cwd="~/utkarsh/rust/etcetera" focus=true
 
-    tab name="fix-home" cwd="utkarsh/fix-home"
+    tab name="fix-home" cwd="~/utkarsh/fix-home"
 
-    tab name="fix-xdg" cwd="utkarsh/fix-xdg"
+    tab name="fix-xdg" cwd="~/utkarsh/fix-xdg"
 }

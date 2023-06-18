@@ -6,9 +6,9 @@ layout {
         children
     }
 
-    tab name="nix" cwd="utkarsh/nix"
+    tab name="nix" cwd="~/utkarsh/nix"
 
-    tab name="config" cwd="utkarsh/nix/config" focus=true
+    tab name="config" cwd="~/utkarsh/nix/config" focus=true
 
-    tab name=".config" cwd=".config"
+    tab name=".config" cwd="~/.config"
 }
