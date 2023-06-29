@@ -108,7 +108,7 @@ symbol = " "
 
 [haxe]
 format = "\\[[$symbol($version)]($style)\\]"
-symbol = "⌘ "
+symbol = " "
 
 [helm]
 format = "\\[[$symbol($version)]($style)\\]"
@@ -226,7 +226,7 @@ format = "\\[[$symbol($version)]($style)\\]"
 
 [pijul_channel]
 format = "\\[[$symbol$channel]($style)\\]"
-symbol = "🪺 "
+symbol = " "
 
 [pulumi]
 format = "\\[[$symbol$stack]($style)\\]"
@@ -268,7 +268,6 @@ format = "\\[[$symbol($version)]($style)\\]"
 
 [spack]
 format = "\\[[$symbol$environment]($style)\\]"
-symbol = "🅢 "
 
 [status]
 disabled = false
