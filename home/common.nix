@@ -44,9 +44,9 @@
     ./services/nix.nix
     ./services/nixpkgs.nix
     # ./services/screen-locker.nix
+    ./services/shell.nix
     ./services/ssh.nix
     # ./services/xsession.nix
-    ./services/zsh.nix
   ];
 }
 

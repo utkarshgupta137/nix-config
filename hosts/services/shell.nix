@@ -9,6 +9,7 @@
     shells = [ pkgs.zsh ];
 
     variables = {
+      HISTFILE = "\$HOME/.local/state/bash/history";
       ZDOTDIR = "\$HOME/.config/zsh";
     };
   };

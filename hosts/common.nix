@@ -25,9 +25,9 @@
     # ./services/networking.nix
     ./services/nix.nix
     ./services/nixpkgs.nix
+    ./services/shell.nix
     # ./services/terminfo.nix
     # ./services/time.nix
     # ./services/xserver.nix
-    ./services/zsh.nix
   ];
 }
