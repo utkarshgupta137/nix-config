@@ -1,5 +1,9 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   environment = {
+    etc."pythonrc" = {
+      source = ../../assets/pythonrc;
+    };
+
     pathsToLink = [ "/libexec" "/share/zsh" ];
 
     profiles = [
@@ -10,6 +14,7 @@
 
     variables = {
       HISTFILE = "\$HOME/.local/state/bash/history";
+      PYTHONSTARTUP = "/etc/pythonrc";
       ZDOTDIR = "\$HOME/.config/zsh";
     };
   };
