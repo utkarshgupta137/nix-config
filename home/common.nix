@@ -13,6 +13,7 @@
     # ./programs/dunst.nix
     # ./programs/feh.nix
     # ./programs/firefox.nix
+    ./programs/gh.nix
     ./programs/gitui.nix
     # ./programs/gnome-keyring.nix
     ./programs/helix.nix
