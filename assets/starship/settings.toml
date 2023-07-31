@@ -2,6 +2,7 @@
 
 [directory.substitutions]
 controller = "ctl"
+crosschain = "xc"
 galleon = "tfx"
 
 [git_commit]
