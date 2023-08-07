@@ -1,0 +1,34 @@
+diff --git a/zellij-server/src/os_input_output.rs b/zellij-server/src/os_input_output.rs
+index 18e8f92db..23e4a2ab3 100644
+--- a/zellij-server/src/os_input_output.rs
++++ b/zellij-server/src/os_input_output.rs
+@@ -728,9 +728,7 @@ impl ServerOsApi for ServerOsInputOutput {
+             .lock()
+             .to_anyhow()
+             .with_context(|| format!("failed to remove client {client_id}"))?;
+-        if client_senders.contains_key(&client_id) {
+-            client_senders.remove(&client_id);
+-        }
++        client_senders.remove(&client_id);
+         Ok(())
+     }
+ 
+diff --git a/zellij-server/src/screen.rs b/zellij-server/src/screen.rs
+index 030a63a57..ff421303f 100644
+--- a/zellij-server/src/screen.rs
++++ b/zellij-server/src/screen.rs
+@@ -1187,12 +1187,10 @@ impl Screen {
+                 tab.visible(false).with_context(err_context)?;
+             }
+         }
+-        if self.active_tab_indices.contains_key(&client_id) {
++        if self.active_tab_indices.len() > 1 {
+             self.active_tab_indices.remove(&client_id);
+         }
+-        if self.tab_history.contains_key(&client_id) {
+-            self.tab_history.remove(&client_id);
+-        }
++        self.tab_history.remove(&client_id);
+         self.connected_clients.borrow_mut().remove(&client_id);
+         self.update_tabs().with_context(err_context)
+     }
