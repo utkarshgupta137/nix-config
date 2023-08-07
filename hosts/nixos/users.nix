@@ -1,6 +1,6 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   users = {
-    defaultUserShell = pkgs.zsh;
+    defaultUserShell = pkgs.fish;
 
     users = {
       utkarsh = {

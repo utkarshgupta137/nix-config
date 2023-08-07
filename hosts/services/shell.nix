@@ -4,25 +4,20 @@
       source = ../../assets/pythonrc;
     };
 
-    pathsToLink = [ "/libexec" "/share/zsh" ];
-
     profiles = [
       "\$HOME/.local/state/nix/profile"
     ];
 
-    shells = [ pkgs.zsh ];
+    shells = [ pkgs.fish ];
 
     variables = {
       HISTFILE = "\$HOME/.local/state/bash/history";
       PYTHONSTARTUP = "/etc/pythonrc";
-      ZDOTDIR = "\$HOME/.config/zsh";
     };
   };
 
-  programs.zsh = {
+  programs.fish = {
     enable = true;
-    enableCompletion = false;
-    enableBashCompletion = false;
-    promptInit = "";
+    useBabelfish = true;
   };
 }
