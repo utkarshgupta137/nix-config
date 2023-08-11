@@ -9,6 +9,7 @@
       cmake
       grafana-loki
       influxdb2-cli
+      lemonade
       localstack
       neovim-remote
       sqlite

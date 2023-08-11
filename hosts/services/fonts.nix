@@ -5,7 +5,7 @@
         enable = true;
       };
 
-      fonts = with pkgs; [
+      packages = with pkgs; [
         (nerdfonts.override { fonts = [ "SourceCodePro" ]; })
       ] ++ lib.optionals (pkgs.stdenv.isLinux) [
         inputs.apple-fonts.packages.${pkgs.system}.sf-pro
