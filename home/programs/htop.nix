@@ -19,9 +19,10 @@
       ];
       highlight_base_name = true;
       highlight_changes = true;
-      hide_userland_threads = true;
+      hide_userland_threads = false;
       shadow_distribution_path_prefix = true;
       shadow_other_users = true;
+      show_thread_names = true;
       tree_view = true;
       tree_sort_key = config.lib.htop.fields.COMM;
     } // (with config.lib.htop; leftMeters [
