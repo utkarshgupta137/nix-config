@@ -10,9 +10,14 @@
     withRuby = true;
   };
 
-  xdg.configFile."nvim/lua/plugins/sqlite.lua".text = ''
-    vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.dylib'
+  xdg.configFile."nvim/lua/plugins/sqlite.lua".text =
+    if (pkgs.stdenv.isDarwin) then ''
+      vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.dylib'
 
-    return {}
-  '';
+      return {}
+    '' else ''
+      vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.so'
+
+      return {};
+    '';
 }
