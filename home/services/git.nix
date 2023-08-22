@@ -67,6 +67,10 @@
       }
     ];
 
+    lfs = {
+      enable = true;
+    };
+
     signing = {
       key = null;
       signByDefault = true;
