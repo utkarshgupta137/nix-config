@@ -54,6 +54,9 @@ keybinds clear-defaults=true {
         bind "n" { NewTab; SwitchToMode "Normal"; }
         bind "x" { CloseTab; SwitchToMode "Normal"; }
         bind "s" { ToggleActiveSyncTab; SwitchToMode "Normal"; }
+        bind "b" { BreakPane; SwitchToMode "Normal"; }
+        bind "]" { BreakPaneRight; SwitchToMode "Normal"; }
+        bind "[" { BreakPaneLeft; SwitchToMode "Normal"; }
         bind "1" { GoToTab 1; SwitchToMode "Normal"; }
         bind "2" { GoToTab 2; SwitchToMode "Normal"; }
         bind "3" { GoToTab 3; SwitchToMode "Normal"; }
@@ -149,6 +152,12 @@ keybinds clear-defaults=true {
             };
             ToggleFocusFullscreen;
         }
+        bind "Alt w" {
+            LaunchOrFocusPlugin "zellij:session-manager" {
+                floating true
+                move_to_focused_tab true
+            };
+        }
         bind "Alt q" { Detach; }
         bind "Alt T" { NewPane; }
         bind "Alt N" { NewTab; }
@@ -202,6 +211,7 @@ plugins {
     status-bar { path "status-bar"; }
     strider { path "strider"; }
     compact-bar { path "compact-bar"; }
+    session-manager { path "session-manager"; }
 }
 
 ui {
@@ -229,6 +239,10 @@ ui {
 // Default: $SHELL
 //
 // default_shell "fish"
+
+// Choose the path to override cwd that zellij will use for opening new panes
+//
+// default_cwd ""
 
 // Toggle between having pane frames around the panes
 // Options:
