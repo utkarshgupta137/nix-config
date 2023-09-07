@@ -25,7 +25,6 @@
     ./programs/navi.nix
     ./programs/neovim.nix
     # ./programs/network-manager-applet.nix
-    # ./programs/nushell.nix
     # ./programs/picom.nix
     # ./programs/playerctl.nix
     # ./programs/polybar.nix
