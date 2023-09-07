@@ -15,6 +15,7 @@
 
     caskArgs.require_sha = true;
     casks = [
+      "1password"
       "bitwarden"
       "bluesnooze"
       "cloudflare-warp"
