@@ -7,9 +7,8 @@
     packages = with pkgs; [
       awscli2
       cmake
+      go-migrate
       grafana-loki
-      influxdb2-cli
-      lemonade
       localstack
       neovim-remote
       sqlite
@@ -22,7 +21,7 @@
       tokei
       # toml-merge
       tree-sitter
-      # vector
+      vector
       vivid
       xcp
 
