@@ -27,13 +27,15 @@
 
       rustup
       cargo-audit
-      # cargo-cranky
+      cargo-cranky
       cargo-criterion
-      cargo-edit
-      # cargo-lambda
+      cargo-expand
+      cargo-hack
+      cargo-lambda
       cargo-machete
       cargo-nextest
-      cargo-update
+      cargo-sweep
+      cargo-watch
     ] ++ lib.optionals (pkgs.stdenv.isDarwin) [
       pinentry_mac
     ] ++ lib.optionals (pkgs.stdenv.isLinux) [
