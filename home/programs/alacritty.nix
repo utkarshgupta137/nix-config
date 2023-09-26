@@ -8,7 +8,7 @@
       scrolling.history = 100000;
 
       font = {
-        normal.family = "SauceCodePro Nerd Font";
+        normal.family = "SauceCodePro Nerd Font Propo";
         bold.style = "SemiBold";
         italic.style = "Medium Italic";
 
