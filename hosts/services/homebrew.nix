@@ -13,7 +13,6 @@
       "vectordotdev/brew/vector"
     ];
 
-    caskArgs.require_sha = true;
     casks = [
       "1password"
       "bitwarden"
