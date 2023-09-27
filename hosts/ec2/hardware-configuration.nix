@@ -1,5 +1,5 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   boot = {
-    kernelParams = [ "nosmt" "isolcpus=0-23" ];
+    kernelParams = [ "nosmt" "isolcpus=0-19" ];
   };
 }
