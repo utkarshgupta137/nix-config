@@ -39,9 +39,15 @@
     ] ++ lib.optionals (pkgs.stdenv.isDarwin) [
       pinentry_mac
     ] ++ lib.optionals (pkgs.stdenv.isLinux) [
+      cmake
       efibootmgr
       gcc
+      gnumake
+      openssl
+      patchelf
+      pkg-config
       playerctl
+      unzip
       xclip
 
       discord
@@ -62,6 +68,7 @@
     shellAliases = {
       l = "lsd -al";
       nixdarwin = "darwin-rebuild --flake ~/utkarsh/nix/config switch";
+      nixlinux = "sudo nixos-rebuild --flake ~/utkarsh/nix/config switch";
       nixhome = "home-manager --flake ~/utkarsh/nix/config switch";
       n = "nvim";
       nv = "nvim";
