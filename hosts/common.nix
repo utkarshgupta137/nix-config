@@ -4,6 +4,7 @@
 
 
 
+
     # ./hardware/audio.nix
     # ./hardware/bluetooth.nix
     # ./hardware/boot.nix
@@ -26,6 +27,7 @@
     ./services/nix.nix
     ./services/nixpkgs.nix
     ./services/shell.nix
+    # ./services/sshd.nix
     # ./services/terminfo.nix
     # ./services/time.nix
     # ./services/xserver.nix
