@@ -60,6 +60,7 @@
       AWS_CLI_HISTORY_FILE = "${config.xdg.stateHome}/aws/history";
       AWS_CONFIG_FILE = "${config.xdg.configHome}/aws/config";
       CARGO_HOME = "${config.xdg.dataHome}/cargo";
+      DPRINT_CACHE_DIR = "${config.xdg.cacheHome}/dprint";
       LESSHISTFILE = "${config.xdg.stateHome}/less/history";
       NPM_CONFIG_CACHE = "${config.xdg.cacheHome}/npm";
       RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
