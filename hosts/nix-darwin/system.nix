@@ -43,9 +43,6 @@
     NSGlobalDomain = {
       AppleMenuBarVisibleInFullscreen = true;
       AppleReduceDesktopTinting = 1;
-      NSUserKeyEquivalents = {
-        "Quit alacritty" = "@~^$q";
-      };
       _HIHideMenuBar = 0;
     };
     "com.apple.finder" = {
