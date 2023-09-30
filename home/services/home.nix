@@ -21,7 +21,6 @@
       tokei
       # toml-merge
       tree-sitter
-      vector
       vivid
       xcp
 
@@ -49,6 +48,8 @@
       playerctl
       unzip
       xclip
+
+      vector
 
       discord
       gnome.gnome-calculator

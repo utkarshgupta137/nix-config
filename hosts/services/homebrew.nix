@@ -4,11 +4,13 @@
 
     taps = [
       "filosottile/musl-cross"
+      "vectordotdev/brew"
     ];
 
     brews = [
       "showkey"
       "filosottile/musl-cross/musl-cross"
+      "vectordotdev/brew/vector"
     ];
 
     casks = [
