@@ -4,28 +4,23 @@
 
     taps = [
       "filosottile/musl-cross"
-      "vectordotdev/brew"
     ];
 
     brews = [
       "showkey"
       "filosottile/musl-cross/musl-cross"
-      "vectordotdev/brew/vector"
     ];
 
     casks = [
       "1password"
-      "bitwarden"
       "bluesnooze"
       "cloudflare-warp"
-      "discord"
       "docker"
       "firefox"
       "google-drive"
       "iina"
       "itsycal"
       "keyboardcleantool"
-      "kitty"
       "linear-linear"
       "notion"
       "postman"
@@ -36,7 +31,6 @@
       "spotify"
       "steam"
       "via"
-      "wezterm"
       "whatsapp"
     ];
 
