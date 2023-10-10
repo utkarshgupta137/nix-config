@@ -11,7 +11,6 @@
       grafana-loki
       localstack
       neovim-remote
-      sqlite
 
       dprint
       fd
