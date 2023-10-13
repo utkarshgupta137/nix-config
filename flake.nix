@@ -18,7 +18,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # Apple fonts
-    apple-fonts.url = "github:adamcstephens/apple-fonts.nix";
+    apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
 
     # Add any other flake you might need
     # hardware.url = "github:nixos/nixos-hardware";
