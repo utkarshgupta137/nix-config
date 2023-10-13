@@ -1,7 +1,7 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   networking.hostName = "utkarsh-dev";
 
-  nixpkgs.hostPlatform = "x86_64-linux";
+  nixpkgs.hostPlatform = "aarch64-linux";
 
   security.sudo.extraConfig = ''
     Defaults timestamp_timeout=60
