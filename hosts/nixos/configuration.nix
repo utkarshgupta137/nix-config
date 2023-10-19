@@ -22,6 +22,7 @@
     ../hardware/power.nix
     ../hardware/qmk.nix
     ../hardware/video.nix
+    ../services/chrony.nix
     ../services/gnome-keyring.nix
     ../services/i18n.nix
     ../services/interception-tools.nix

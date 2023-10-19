@@ -13,6 +13,7 @@
 
     # You can also split up your configuration and import pieces of it here:
     ../common.nix
+    ../services/chrony.nix
     ../services/i18n.nix
     ../services/sshd.nix
     ./system.nix

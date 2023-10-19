@@ -17,6 +17,7 @@
 
 
 
+    # ./services/chrony.nix
     ./services/fonts.nix
     # ./services/gnome-keyring.nix
     # ./services/homebrew.nix
