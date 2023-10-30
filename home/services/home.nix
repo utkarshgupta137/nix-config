@@ -80,7 +80,7 @@
       jnx = "zellij -l nix a -c nix";
       jnv = "zellij -l nvim a -c nvim";
       jfx = "zellij -l tfx a -c tfx";
-      jxc = "zellij -l preprod a -c preprod options --pane-frames=true";
+      jtf = "zellij -l tf a -c tf options --pane-frames=true";
     };
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
