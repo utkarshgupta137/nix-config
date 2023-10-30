@@ -6,6 +6,7 @@
 
 
     ./programs/alacritty.nix
+    ./programs/atuin.nix
     ./programs/bat.nix
     # ./programs/blueman-applet.nix
     ./programs/bottom.nix
