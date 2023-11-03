@@ -38,20 +38,20 @@
     ] ++ lib.optionals (pkgs.stdenv.isDarwin) [
       pinentry_mac
     ] ++ lib.optionals (pkgs.stdenv.isLinux) [
-      efibootmgr
+      # efibootmgr
       gcc
       gnumake
       patchelf
-      playerctl
+      # playerctl
       unzip
-      xclip
+      # xclip
 
       vector
 
-      discord
-      gnome.gnome-calculator
-      gnome.gnome-screenshot
-      spotify
+      # discord
+      # gnome.gnome-calculator
+      # gnome.gnome-screenshot
+      # spotify
     ];
 
     sessionVariables = {
