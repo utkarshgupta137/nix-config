@@ -16,6 +16,7 @@
     ../services/chrony.nix
     ../services/i18n.nix
     ../services/sshd.nix
+    ../services/virtualisation.nix
     ./system.nix
     ./users.nix
 

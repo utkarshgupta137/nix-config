@@ -6,7 +6,7 @@
       utkarsh = {
         isNormalUser = true;
         description = "Utkarsh Gupta";
-        extraGroups = [ "wheel" ];
+        extraGroups = [ "docker" "wheel" ];
       };
     };
   };
