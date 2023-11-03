@@ -38,13 +38,10 @@
     ] ++ lib.optionals (pkgs.stdenv.isDarwin) [
       pinentry_mac
     ] ++ lib.optionals (pkgs.stdenv.isLinux) [
-      cmake
       efibootmgr
       gcc
       gnumake
-      openssl
       patchelf
-      pkg-config
       playerctl
       unzip
       xclip
