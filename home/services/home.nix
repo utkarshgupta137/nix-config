@@ -27,6 +27,7 @@
       cargo-audit
       cargo-cranky
       cargo-criterion
+      cargo-deny
       cargo-expand
       cargo-hack
       cargo-lambda
