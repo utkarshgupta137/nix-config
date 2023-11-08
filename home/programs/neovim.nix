@@ -4,7 +4,7 @@
     extraPython3Packages = pyPkgs: with pkgs; [
       (python3.pkgs.toPythonModule (apache-airflow.pythonPackages.apache-airflow.override {
         enabledProviders = [
-          # "airflow"
+          # "amazon"
           "http"
           # "slack"
           "ssh"
