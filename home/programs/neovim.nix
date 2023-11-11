@@ -2,14 +2,14 @@
   programs.neovim = {
     enable = true;
     extraPython3Packages = pyPkgs: with pkgs; [
-      (python3.pkgs.toPythonModule (apache-airflow.pythonPackages.apache-airflow.override {
-        enabledProviders = [
-          # "amazon"
-          "http"
-          # "slack"
-          "ssh"
-        ];
-      }))
+      # (python3.pkgs.toPythonModule (apache-airflow.pythonPackages.apache-airflow.override {
+      #   enabledProviders = [
+      #     # "amazon"
+      #     "http"
+      #     "slack"
+      #     "ssh"
+      #   ];
+      # }))
     ];
     defaultEditor = true;
     viAlias = true;
