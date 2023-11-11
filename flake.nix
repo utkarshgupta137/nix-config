@@ -8,6 +8,9 @@
     # at the same time. Here's an working example:
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     # Also see the 'stable-packages' overlay at 'overlays/default.nix'.
+    
+    # NixOS
+    linux.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Nix darwin
     darwin.url = "github:LnL7/nix-darwin";
@@ -28,7 +31,7 @@
     # nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, darwin, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, linux, darwin, home-manager, ... }@inputs:
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
@@ -68,7 +71,7 @@
       # NixOS configuration entrypoint
       nixosConfigurations = {
         # Available through "nixos-rebuild --flake '.#utkarsh-nix' switch"
-        utkarsh-nix = nixpkgs.lib.nixosSystem {
+        utkarsh-nix = linux.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [
             # > Our main nixos configuration file <
@@ -77,7 +80,7 @@
         };
 
         # Available through "nixos-rebuild --flake '.#utkarsh-dev' switch"
-        utkarsh-dev = nixpkgs.lib.nixosSystem {
+        utkarsh-dev = linux.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [
             # > Our main nixos configuration file <
