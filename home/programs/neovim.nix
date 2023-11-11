@@ -10,6 +10,8 @@
       #     "ssh"
       #   ];
       # }))
+      pyPkgs.tqdm
+      pyPkgs.zstandard
     ];
     defaultEditor = true;
     viAlias = true;
