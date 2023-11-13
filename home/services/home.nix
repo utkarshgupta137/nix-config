@@ -63,6 +63,7 @@
       LESSHISTFILE = "${config.xdg.stateHome}/less/history";
       NPM_CONFIG_CACHE = "${config.xdg.cacheHome}/npm";
       RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
+      WAKATIME_HOME = "${config.xdg.dataHome}/wakatime";
     };
 
     shellAliases = {
