@@ -12,6 +12,7 @@
       localstack
       neovim-remote
       sqlite
+      ssm-session-manager-plugin
 
       dprint
       fd
