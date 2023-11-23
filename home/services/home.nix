@@ -85,7 +85,7 @@
     };
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-    stateVersion = "23.05";
+    stateVersion = "23.11";
   };
 
   home.pointerCursor = lib.mkIf (pkgs.stdenv.isLinux) {
