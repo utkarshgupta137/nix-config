@@ -31,6 +31,7 @@
       cargo-criterion
       cargo-deny
       cargo-expand
+      cargo-flamegraph
       cargo-hack
       cargo-lambda
       cargo-machete
