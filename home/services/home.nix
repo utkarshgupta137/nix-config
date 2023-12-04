@@ -62,6 +62,7 @@
       AWS_CONFIG_FILE = "${config.xdg.configHome}/aws/config";
       CARGO_HOME = "${config.xdg.dataHome}/cargo";
       DPRINT_CACHE_DIR = "${config.xdg.cacheHome}/dprint";
+      GRANTED_ALIAS_CONFIGURED = "true";
       LESSHISTFILE = "${config.xdg.stateHome}/less/history";
       NPM_CONFIG_CACHE = "${config.xdg.cacheHome}/npm";
       RUSTUP_HOME = "${config.xdg.dataHome}/rustup";

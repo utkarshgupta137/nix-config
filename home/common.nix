@@ -17,6 +17,7 @@
     ./programs/gh.nix
     ./programs/gitui.nix
     # ./programs/gnome-keyring.nix
+    ./programs/granted.nix
     ./programs/helix.nix
     ./programs/htop.nix
     ./programs/jq.nix
