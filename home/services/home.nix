@@ -14,6 +14,7 @@
       sqlite
       ssm-session-manager-plugin
 
+      bandwhich
       dprint
       fd
       just
