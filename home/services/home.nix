@@ -13,6 +13,7 @@
       neovim-remote
       sqlite
       ssm-session-manager-plugin
+      zstd
 
       bandwhich
       dprint
