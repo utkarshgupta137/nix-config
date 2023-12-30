@@ -29,6 +29,7 @@ symbol = " "
 
 [crystal]
 format = "\\[[$symbol($version)]($style)\\]"
+symbol = " "
 
 [daml]
 format = "\\[[$symbol($version)]($style)\\]"
@@ -57,7 +58,7 @@ format = "\\[[$symbol($version)(🎯 $tfm)]($style)\\]"
 
 [elixir]
 format = "\\[[$symbol($version \\(OTP $otp_version\\))]($style)\\]"
-symbol = " "
+symbol = " "
 
 [elm]
 format = "\\[[$symbol($version)]($style)\\]"
@@ -68,6 +69,7 @@ format = "\\[[$symbol($version)]($style)\\]"
 
 [fennel]
 format = "\\[[$symbol($version)]($style)\\]"
+symbol = " "
 
 [fossil_branch]
 format = "\\[[$symbol$branch]($style)\\]"
@@ -131,6 +133,7 @@ symbol = " "
 
 [kotlin]
 format = "\\[[$symbol($version)]($style)\\]"
+symbol = " "
 
 [kubernetes]
 format = "\\[[$symbol$context( \\($namespace\\))]($style)\\]"
@@ -164,6 +167,7 @@ symbol = " "
 
 [ocaml]
 format = "\\[[$symbol($version)(\\($switch_indicator$switch_name\\))]($style)\\]"
+symbol = " "
 
 [opa]
 format = "\\[[$symbol($version)]($style)\\]"
@@ -221,9 +225,11 @@ symbol = "󰏗 "
 
 [perl]
 format = "\\[[$symbol($version)]($style)\\]"
+symbol = " "
 
 [php]
 format = "\\[[$symbol($version)]($style)\\]"
+symbol = " "
 
 [pijul_channel]
 format = "\\[[$symbol$channel]($style)\\]"
@@ -282,6 +288,7 @@ format = "\\[[as $symbol]($style)\\]"
 
 [swift]
 format = "\\[[$symbol($version)]($style)\\]"
+symbol = " "
 
 [terraform]
 format = "\\[[$symbol$workspace]($style)\\]"
@@ -302,4 +309,5 @@ format = "\\[[$symbol($version)]($style)\\]"
 
 [zig]
 format = "\\[[$symbol($version)]($style)\\]"
+symbol = " "
 
