@@ -2,8 +2,8 @@
   "plugins": [
     "https://plugins.dprint.dev/json-0.19.1.wasm",
     "https://plugins.dprint.dev/markdown-0.16.3.wasm",
-    "https://plugins.dprint.dev/prettier-0.27.0.json@3557a62b4507c55a47d8cde0683195b14d13c41dda66d0f0b0e111aed107e2fe",
-    "https://plugins.dprint.dev/ruff-0.0.2.wasm",
+    "https://plugins.dprint.dev/prettier-0.32.0.json@fa93f05ab38f00c6de138f7747372585c661f79dfb11d7f1209c069b56680820",
+    "https://plugins.dprint.dev/ruff-0.0.5.wasm",
     "https://plugins.dprint.dev/toml-0.5.4.wasm"
   ]
 }
