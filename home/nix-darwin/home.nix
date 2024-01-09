@@ -12,6 +12,7 @@
 
     # You can also split up your configuration and import pieces of it here:
     ../common.nix
+    ../programs/alacritty.nix
     ../services/karabiner.nix
   ];
 

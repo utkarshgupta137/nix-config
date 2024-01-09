@@ -5,7 +5,7 @@
 
 
 
-    ./programs/alacritty.nix
+    # ./programs/alacritty.nix
     ./programs/atuin.nix
     ./programs/bat.nix
     # ./programs/blueman-applet.nix
