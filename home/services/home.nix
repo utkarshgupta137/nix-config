@@ -20,6 +20,7 @@
       fd
       just
       rm-improved
+      rye
       sd
       tokei
       # toml-merge
