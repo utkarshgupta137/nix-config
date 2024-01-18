@@ -6,7 +6,6 @@
       (python3.pkgs.toPythonModule (apache-airflow.pythonPackages.apache-airflow.override {
         enabledProviders = [
           # "amazon"
-          "http"
           # "slack"
           "ssh"
         ];
