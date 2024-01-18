@@ -1,18 +1,6 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   programs.neovim = {
     enable = true;
-    extraPython3Packages = pyPkgs: with pkgs; [
-      pyPkgs.boto3
-      (python3.pkgs.toPythonModule (apache-airflow.pythonPackages.apache-airflow.override {
-        enabledProviders = [
-          # "amazon"
-          # "slack"
-          "ssh"
-        ];
-      }))
-      pyPkgs.tqdm
-      pyPkgs.zstandard
-    ];
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
