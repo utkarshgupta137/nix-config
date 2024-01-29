@@ -39,18 +39,6 @@
   system.defaults.trackpad.Clicking = true;
   system.defaults.trackpad.Dragging = true;
 
-  system.defaults.CustomSystemPreferences = {
-    NSGlobalDomain = {
-      AppleMenuBarVisibleInFullscreen = true;
-      AppleReduceDesktopTinting = 1;
-      _HIHideMenuBar = 0;
-    };
-    "com.apple.finder" = {
-      FXArrangeGroupViewBy = "kind";
-      FXPreferredGroupBy = "Kind";
-    };
-  };
-
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon = {
     enable = true;
