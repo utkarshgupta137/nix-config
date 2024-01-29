@@ -64,6 +64,7 @@
       AWS_CLI_HISTORY_FILE = "${config.xdg.stateHome}/aws/history";
       AWS_CONFIG_FILE = "${config.xdg.configHome}/aws/config";
       CARGO_HOME = "${config.xdg.dataHome}/cargo";
+      CARGO_NET_GIT_FETCH_WITH_CLI = "true";
       DPRINT_CACHE_DIR = "${config.xdg.cacheHome}/dprint";
       GRANTED_ALIAS_CONFIGURED = "true";
       LESSHISTFILE = "${config.xdg.stateHome}/less/history";
