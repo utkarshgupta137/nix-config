@@ -20,6 +20,7 @@
       fd
       just
       rm-improved
+      ruff
       rye
       sd
       tokei
