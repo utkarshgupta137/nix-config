@@ -8,7 +8,7 @@
     # at the same time. Here's an working example:
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     # Also see the 'stable-packages' overlay at 'overlays/default.nix'.
-    
+
     # NixOS
     linux.url = "github:nixos/nixpkgs/nixos-unstable";
 
