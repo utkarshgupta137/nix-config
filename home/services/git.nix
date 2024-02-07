@@ -61,6 +61,8 @@
         autoStash = true;
         missingCommitsCheck = "warn";
       };
+
+      rerere.enabled = true;
     };
 
     includes = [
