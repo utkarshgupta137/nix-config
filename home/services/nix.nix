@@ -2,6 +2,8 @@
   nix = {
     package = pkgs.nixUnstable;
 
+    gc.automatic = true;
+
     settings = {
       use-xdg-base-directories = true;
 
