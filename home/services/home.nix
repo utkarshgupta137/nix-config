@@ -21,7 +21,6 @@
       just
       nixpkgs-fmt
       rm-improved
-      ruff
       rye
       sd
       tokei
