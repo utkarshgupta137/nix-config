@@ -67,9 +67,13 @@
       CARGO_HOME = "${config.xdg.dataHome}/cargo";
       CARGO_NET_GIT_FETCH_WITH_CLI = "true";
       DPRINT_CACHE_DIR = "${config.xdg.cacheHome}/dprint";
+      GOPATH = "${config.xdg.dataHome}/go";
       GRANTED_ALIAS_CONFIGURED = "true";
       LESSHISTFILE = "${config.xdg.stateHome}/less/history";
+      MYPY_CACHE_DIR = "${config.xdg.cacheHome}/mypy";
       NPM_CONFIG_CACHE = "${config.xdg.cacheHome}/npm";
+      PYTHONPYCACHEPREFIX = "${config.xdg.cacheHome}/python";
+      RUFF_CACHE_DIR = "${config.xdg.cacheHome}/ruff";
       RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
       RYE_HOME = "${config.xdg.dataHome}/rye";
       WAKATIME_HOME = "${config.xdg.dataHome}/wakatime";
