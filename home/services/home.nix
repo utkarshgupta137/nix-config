@@ -69,6 +69,7 @@
       DPRINT_CACHE_DIR = "${config.xdg.cacheHome}/dprint";
       GOPATH = "${config.xdg.dataHome}/go";
       GRANTED_ALIAS_CONFIGURED = "true";
+      LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib:${pkgs.zlib}/lib";
       LESSHISTFILE = "${config.xdg.stateHome}/less/history";
       MYPY_CACHE_DIR = "${config.xdg.cacheHome}/mypy";
       NPM_CONFIG_CACHE = "${config.xdg.cacheHome}/npm";
