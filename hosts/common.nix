@@ -27,6 +27,7 @@
     # ./services/networking.nix
     ./services/nix.nix
     ./services/nixpkgs.nix
+    # ./services/oomd.nix
     ./services/shell.nix
     # ./services/sshd.nix
     # ./services/terminfo.nix

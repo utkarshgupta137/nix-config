@@ -26,6 +26,7 @@
     ../services/gnome-keyring.nix
     ../services/i18n.nix
     ../services/interception-tools.nix
+    ../services/oomd.nix
     ../services/time.nix
     ../services/xserver.nix
     ./system.nix

@@ -15,6 +15,7 @@
     ../common.nix
     ../services/chrony.nix
     ../services/i18n.nix
+    ../services/oomd.nix
     ../services/sshd.nix
     ../services/virtualisation.nix
     ./system.nix
