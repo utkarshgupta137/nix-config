@@ -25,6 +25,7 @@
     # ./services/interception-tools.nix
     # ./services/karabiner.nix
     # ./services/networking.nix
+    # ./services/nix-ld.nix
     ./services/nix.nix
     ./services/nixpkgs.nix
     # ./services/oomd.nix
