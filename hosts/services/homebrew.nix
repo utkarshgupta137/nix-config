@@ -8,6 +8,7 @@
     ];
 
     brews = [
+      "libomp"
       "showkey"
       "filosottile/musl-cross/musl-cross"
       "vectordotdev/brew/vector"
