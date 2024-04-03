@@ -61,6 +61,8 @@
       # spotify
     ];
 
+    preferXdgDirectories = true;
+
     sessionVariables = {
       AWS_CLI_HISTORY_FILE = "${config.xdg.stateHome}/aws/history";
       AWS_CONFIG_FILE = "${config.xdg.configHome}/aws/config";
