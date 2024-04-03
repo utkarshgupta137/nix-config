@@ -37,7 +37,6 @@
       cargo-expand
       cargo-flamegraph
       cargo-hack
-      cargo-lambda
       cargo-machete
       cargo-nextest
       cargo-sweep
