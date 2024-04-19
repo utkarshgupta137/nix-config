@@ -17,7 +17,6 @@
 
       bandwhich
       dprint
-      fd
       just
       nixpkgs-fmt
       rm-improved

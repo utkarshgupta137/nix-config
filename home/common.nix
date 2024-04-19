@@ -5,6 +5,7 @@
 
 
 
+
     # ./programs/alacritty.nix
     ./programs/atuin.nix
     ./programs/bat.nix
@@ -12,6 +13,7 @@
     ./programs/bottom.nix
     ./programs/broot.nix
     # ./programs/dunst.nix
+    ./programs/fd.nix
     # ./programs/feh.nix
     # ./programs/firefox.nix
     ./programs/gh.nix
