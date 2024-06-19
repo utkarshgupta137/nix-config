@@ -1,4 +1,12 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   programs.gitui = {
     enable = true;
 
@@ -10,7 +18,7 @@
           move_right: Some(( code: Char('l'), modifiers: ( bits: 0,),)),
           move_up: Some(( code: Char('k'), modifiers: ( bits: 0,),)),
           move_down: Some(( code: Char('j'), modifiers: ( bits: 0,),)),
-        
+
           popup_up: Some(( code: Char('p'), modifiers: ( bits: 2,),)),
           popup_down: Some(( code: Char('n'), modifiers: ( bits: 2,),)),
           page_up: Some(( code: Char('b'), modifiers: ( bits: 2,),)),

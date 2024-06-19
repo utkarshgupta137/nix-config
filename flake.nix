@@ -31,7 +31,15 @@
     # nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, linux, darwin, home-manager, ... }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      linux,
+      darwin,
+      home-manager,
+      ...
+    }@inputs:
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
@@ -45,15 +53,21 @@
     rec {
       # Your custom packages
       # Acessible through 'nix build', 'nix shell', etc
-      packages = forAllSystems (system:
-        let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./pkgs { inherit pkgs; }
+      packages = forAllSystems (
+        system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
+        import ./pkgs { inherit pkgs; }
       );
       # Devshell for bootstrapping
       # Acessible through 'nix develop' or 'nix-shell' (legacy)
-      devShells = forAllSystems (system:
-        let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./shell.nix { inherit pkgs; }
+      devShells = forAllSystems (
+        system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
+        import ./shell.nix { inherit pkgs; }
       );
 
       # Your custom packages and modifications, exported as overlays
@@ -72,7 +86,9 @@
       nixosConfigurations = {
         # Available through "nixos-rebuild --flake '.#utkarsh-nix' switch"
         utkarsh-nix = linux.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
+          specialArgs = {
+            inherit inputs outputs;
+          };
           modules = [
             # > Our main nixos configuration file <
             ./hosts/nixos/configuration.nix
@@ -81,7 +97,9 @@
 
         # Available through "nixos-rebuild --flake '.#utkarsh-dev' switch"
         utkarsh-dev = linux.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
+          specialArgs = {
+            inherit inputs outputs;
+          };
           modules = [
             # > Our main nixos configuration file <
             ./hosts/ec2/configuration.nix
@@ -94,7 +112,9 @@
         # Available through "darwin-rebuild --flake '.#utkarsh-mbp' switch"
         utkarsh-mbp = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
-          specialArgs = { inherit inputs outputs; };
+          specialArgs = {
+            inherit inputs outputs;
+          };
           modules = [
             # > Our main nix-darwin configuration file <
             ./hosts/nix-darwin/configuration.nix
@@ -107,7 +127,9 @@
         # Available through "home-manager --flake '.#utkarsh@utkarsh-nix' switch"
         "utkarsh@utkarsh-nix" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-          extraSpecialArgs = { inherit inputs outputs; };
+          extraSpecialArgs = {
+            inherit inputs outputs;
+          };
           modules = [
             # > Our main home-manager configuration file <
             ./home/nixos/home.nix
@@ -117,7 +139,9 @@
         # Available through "home-manager --flake '.#utkarsh@utkarsh-dev' switch"
         "utkarsh@utkarsh-dev" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.aarch64-linux; # Home-manager requires 'pkgs' instance
-          extraSpecialArgs = { inherit inputs outputs; };
+          extraSpecialArgs = {
+            inherit inputs outputs;
+          };
           modules = [
             # > Our main home-manager configuration file <
             ./home/ec2/home.nix
@@ -127,7 +151,9 @@
         # Available through "home-manager --flake '.#utkarsh@utkarsh-mbp' switch"
         "utkarsh@utkarsh-mbp" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.aarch64-darwin; # Home-manager requires 'pkgs' instance
-          extraSpecialArgs = { inherit inputs outputs; };
+          extraSpecialArgs = {
+            inherit inputs outputs;
+          };
           modules = [
             # > Our main home-manager configuration file <
             ./home/nix-darwin/home.nix
@@ -136,4 +162,3 @@
       };
     };
 }
-

@@ -1,63 +1,73 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   home = {
     enableNixpkgsReleaseCheck = true;
 
     language.base = "en_IE.UTF-8";
 
-    packages = with pkgs; [
-      awscli2
-      cmake
-      go-migrate
-      grafana-loki
-      localstack
-      neovim-remote
-      sqlite
-      ssm-session-manager-plugin
-      zstd
+    packages =
+      with pkgs;
+      [
+        awscli2
+        cmake
+        go-migrate
+        grafana-loki
+        localstack
+        neovim-remote
+        sqlite
+        ssm-session-manager-plugin
+        zstd
 
-      bandwhich
-      dprint
-      just
-      nixpkgs-fmt
-      rm-improved
-      rye
-      sd
-      tokei
-      # toml-merge
-      tree-sitter
-      vivid
-      xcp
+        bandwhich
+        dprint
+        just
+        nixpkgs-fmt
+        rm-improved
+        rye
+        sd
+        tokei
+        # toml-merge
+        tree-sitter
+        vivid
+        xcp
 
-      rustup
-      cargo-audit
-      cargo-cranky
-      cargo-criterion
-      cargo-deny
-      cargo-expand
-      cargo-flamegraph
-      cargo-hack
-      cargo-machete
-      cargo-nextest
-      cargo-sweep
-      cargo-watch
-    ] ++ lib.optionals (pkgs.stdenv.isDarwin) [
-      pinentry_mac
-    ] ++ lib.optionals (pkgs.stdenv.isLinux) [
-      # efibootmgr
-      gcc
-      gnumake
-      patchelf
-      # playerctl
-      unzip
-      # xclip
+        rustup
+        cargo-audit
+        cargo-cranky
+        cargo-criterion
+        cargo-deny
+        cargo-expand
+        cargo-flamegraph
+        cargo-hack
+        cargo-machete
+        cargo-nextest
+        cargo-sweep
+        cargo-watch
+      ]
+      ++ lib.optionals (pkgs.stdenv.isDarwin) [ pinentry_mac ]
+      ++ lib.optionals (pkgs.stdenv.isLinux) [
+        # efibootmgr
+        gcc
+        gnumake
+        patchelf
+        # playerctl
+        unzip
+        # xclip
 
-      vector
+        vector
 
-      # discord
-      # gnome.gnome-calculator
-      # gnome.gnome-screenshot
-      # spotify
-    ];
+        # discord
+        # gnome.gnome-calculator
+        # gnome.gnome-screenshot
+        # spotify
+      ];
 
     preferXdgDirectories = true;
 

@@ -1,7 +1,13 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
-  home.packages = with pkgs; [
-    i3lock-fancy-rapid
-  ];
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
+  home.packages = with pkgs; [ i3lock-fancy-rapid ];
 
   services.screen-locker = {
     enable = true;

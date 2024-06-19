@@ -1,4 +1,12 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   services.interception-tools =
     let
       dfkConfig = pkgs.writeText "dual-function-keys.yaml" ''
@@ -22,9 +30,7 @@
     {
       enable = true;
 
-      plugins = lib.mkForce [
-        pkgs.interception-tools-plugins.dual-function-keys
-      ];
+      plugins = lib.mkForce [ pkgs.interception-tools-plugins.dual-function-keys ];
 
       udevmonConfig = ''
         - JOB: "${pkg}/bin/intercept -g $DEVNODE | ${plugins.dual-function-keys}/bin/dual-function-keys -c ${dfkConfig} | ${pkg}/bin/uinput -d $DEVNODE"

@@ -1,4 +1,12 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   programs.neovim = {
     enable = true;
     defaultEditor = true;
@@ -17,13 +25,16 @@
   };
 
   xdg.configFile."nvim/lua/plugins/sqlite.lua".text =
-    if (pkgs.stdenv.isDarwin) then ''
-      vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.dylib'
+    if (pkgs.stdenv.isDarwin) then
+      ''
+        vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.dylib'
 
-      return {}
-    '' else ''
-      vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.so'
+        return {}
+      ''
+    else
+      ''
+        vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.so'
 
-      return {};
-    '';
+        return {};
+      '';
 }

@@ -1,4 +1,12 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   environment = {
     etc = {
       terminfo = {
@@ -6,8 +14,6 @@
       };
     };
 
-    systemPackages = [
-      pkgs.ncurses
-    ];
+    systemPackages = [ pkgs.ncurses ];
   };
 }

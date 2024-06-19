@@ -1,11 +1,13 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   imports = [
-
-
-
-
-
-
     # ./programs/alacritty.nix
     ./programs/atuin.nix
     ./programs/bat.nix
@@ -53,4 +55,3 @@
     # ./services/xsession.nix
   ];
 }
-

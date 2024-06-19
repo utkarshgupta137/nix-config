@@ -1,4 +1,12 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   i18n.defaultLocale = "en_IE.UTF-8";
 
   i18n.extraLocaleSettings = {

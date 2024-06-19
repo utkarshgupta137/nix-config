@@ -1,4 +1,12 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   xresources = {
     path = "${config.xdg.configHome}/X11/xresources";
   };
@@ -88,31 +96,20 @@
             "${cfg.config.modifier}+9" = "workspace number 9";
             "${cfg.config.modifier}+0" = "workspace number 10";
 
-            "${cfg.config.modifier}+Shift+1" =
-              "move container to workspace number 1";
-            "${cfg.config.modifier}+Shift+2" =
-              "move container to workspace number 2";
-            "${cfg.config.modifier}+Shift+3" =
-              "move container to workspace number 3";
-            "${cfg.config.modifier}+Shift+4" =
-              "move container to workspace number 4";
-            "${cfg.config.modifier}+Shift+5" =
-              "move container to workspace number 5";
-            "${cfg.config.modifier}+Shift+6" =
-              "move container to workspace number 6";
-            "${cfg.config.modifier}+Shift+7" =
-              "move container to workspace number 7";
-            "${cfg.config.modifier}+Shift+8" =
-              "move container to workspace number 8";
-            "${cfg.config.modifier}+Shift+9" =
-              "move container to workspace number 9";
-            "${cfg.config.modifier}+Shift+0" =
-              "move container to workspace number 10";
+            "${cfg.config.modifier}+Shift+1" = "move container to workspace number 1";
+            "${cfg.config.modifier}+Shift+2" = "move container to workspace number 2";
+            "${cfg.config.modifier}+Shift+3" = "move container to workspace number 3";
+            "${cfg.config.modifier}+Shift+4" = "move container to workspace number 4";
+            "${cfg.config.modifier}+Shift+5" = "move container to workspace number 5";
+            "${cfg.config.modifier}+Shift+6" = "move container to workspace number 6";
+            "${cfg.config.modifier}+Shift+7" = "move container to workspace number 7";
+            "${cfg.config.modifier}+Shift+8" = "move container to workspace number 8";
+            "${cfg.config.modifier}+Shift+9" = "move container to workspace number 9";
+            "${cfg.config.modifier}+Shift+0" = "move container to workspace number 10";
 
             "${cfg.config.modifier}+Shift+c" = "reload";
             "${cfg.config.modifier}+Shift+r" = "restart";
-            "${cfg.config.modifier}+Shift+e" =
-              "exec i3-nagbar -t warning -m 'Do you want to exit i3?' -b 'Yes' 'i3-msg exit'";
+            "${cfg.config.modifier}+Shift+e" = "exec i3-nagbar -t warning -m 'Do you want to exit i3?' -b 'Yes' 'i3-msg exit'";
 
             "${cfg.config.modifier}+r" = "mode resize";
           };
@@ -135,7 +132,11 @@
 
           startup = [
             { command = cfg.config.terminal; }
-            { command = "${pkgs.polybarFull}/bin/polybar &"; always = true; notification = false; }
+            {
+              command = "${pkgs.polybarFull}/bin/polybar &";
+              always = true;
+              notification = false;
+            }
           ];
 
           terminal = "${pkgs.alacritty}/bin/alacritty";

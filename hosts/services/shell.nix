@@ -1,8 +1,14 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   environment = {
-    profiles = [
-      "\$HOME/.local/state/nix/profile"
-    ];
+    profiles = [ "\$HOME/.local/state/nix/profile" ];
 
     shells = [ pkgs.fish ];
 

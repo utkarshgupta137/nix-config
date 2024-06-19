@@ -1,11 +1,24 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   networking.hostName = "utkarsh-dev";
 
   nixpkgs.hostPlatform = "aarch64-linux";
 
   security = {
     pam.loginLimits = [
-      { domain = "*"; item = "nofile"; type = "-"; value = "65536"; }
+      {
+        domain = "*";
+        item = "nofile";
+        type = "-";
+        value = "65536";
+      }
     ];
     sudo.extraConfig = ''
       Defaults timestamp_timeout=60

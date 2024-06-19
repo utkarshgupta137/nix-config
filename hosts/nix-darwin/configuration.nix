@@ -1,7 +1,14 @@
 # This is your system's configuration file.
 # Use this to configure your system environment (it replaces $HOME/.nixpkgs/darwin-configuration.nix).
-
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   # You can import other nix-darwin modules here
   imports = [
     # If you want to use modules your own flake exports (from modules/nix-darwin):

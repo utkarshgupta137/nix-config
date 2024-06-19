@@ -1,4 +1,12 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   users = {
     defaultUserShell = pkgs.fish;
 
@@ -6,7 +14,14 @@
       utkarsh = {
         isNormalUser = true;
         description = "Utkarsh Gupta";
-        extraGroups = [ "audio" "input" "networkmanager" "storage" "video" "wheel" ];
+        extraGroups = [
+          "audio"
+          "input"
+          "networkmanager"
+          "storage"
+          "video"
+          "wheel"
+        ];
       };
     };
   };

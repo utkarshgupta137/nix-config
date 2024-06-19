@@ -1,4 +1,12 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   programs.bottom = {
     enable = true;
 
@@ -17,9 +25,7 @@
       row = [
         {
           ratio = 20;
-          child = [
-            { type = "cpu"; }
-          ];
+          child = [ { type = "cpu"; } ];
         }
         {
           ratio = 80;
@@ -27,12 +33,25 @@
             {
               ratio = 25;
               child = [
-                { ratio = 50; type = "net"; }
-                { ratio = 25; type = "mem"; }
-                { ratio = 25; type = "disk"; }
+                {
+                  ratio = 50;
+                  type = "net";
+                }
+                {
+                  ratio = 25;
+                  type = "mem";
+                }
+                {
+                  ratio = 25;
+                  type = "disk";
+                }
               ];
             }
-            { ratio = 75; type = "proc"; default = true; }
+            {
+              ratio = 75;
+              type = "proc";
+              default = true;
+            }
           ];
         }
       ];

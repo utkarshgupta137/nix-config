@@ -1,6 +1,17 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   boot = {
-    kernelParams = [ "nosmt" "isolcpus=0-19" ];
+    kernelParams = [
+      "nosmt"
+      "isolcpus=0-19"
+    ];
   };
 
   fileSystems = {

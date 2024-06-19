@@ -1,4 +1,12 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   programs.helix = {
     enable = true;
 
@@ -8,7 +16,11 @@
           name = "rust";
           language-server = {
             command = "rustup";
-            args = [ "run" "stable" "rust-analyzer" ];
+            args = [
+              "run"
+              "stable"
+              "rust-analyzer"
+            ];
           };
         }
       ];
