@@ -28,7 +28,7 @@
         bandwhich
         dprint
         just
-        nixpkgs-fmt
+        nixfmt-rfc-style
         rm-improved
         rye
         sd
