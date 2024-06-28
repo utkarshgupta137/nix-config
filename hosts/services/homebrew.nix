@@ -43,6 +43,7 @@
       "steam"
       "via"
       "whatsapp"
+      "wireshark"
     ];
 
     global.brewfile = true;
