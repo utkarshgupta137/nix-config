@@ -17,7 +17,6 @@
       PasswordAuthentication = false;
       # Opinionated: forbid root login through SSH.
       PermitRootLogin = lib.mkForce "no";
-      UsePAM = false;
     };
   };
 }
