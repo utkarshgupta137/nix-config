@@ -27,8 +27,6 @@
           # Workaround for https://github.com/NixOS/nix/issues/9574
           nix-path = config.nix.nixPath;
 
-          sandbox = true;
-
           trusted-substituters = [
             "https://cache.nixos.org"
             "https://hydra.nixos.org"
