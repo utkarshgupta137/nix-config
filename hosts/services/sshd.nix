@@ -10,8 +10,6 @@
   services.openssh = {
     enable = true;
 
-    allowSFTP = false;
-
     settings = {
       KbdInteractiveAuthentication = false;
       # Opinionated: use keys only.
@@ -19,10 +17,7 @@
       PasswordAuthentication = false;
       # Opinionated: forbid root login through SSH.
       PermitRootLogin = lib.mkForce "no";
+      UsePAM = false;
     };
-
-    extraConfig = ''
-      usePAM no
-    '';
   };
 }
