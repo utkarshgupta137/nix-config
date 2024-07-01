@@ -38,7 +38,7 @@
       // (
         with config.lib.htop;
         leftMeters [
-          (bar "LeftCPUs")
+          (bar "LeftCPUs2")
           (text "Blank")
           (bar "CPU")
           (bar "Memory")
@@ -48,7 +48,7 @@
       // (
         with config.lib.htop;
         rightMeters [
-          (bar "RightCPUs")
+          (bar "RightCPUs2")
           (text "Blank")
           (text "Tasks")
           (text "LoadAverage")
