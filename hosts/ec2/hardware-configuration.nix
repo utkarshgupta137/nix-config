@@ -8,10 +8,7 @@
 }:
 {
   boot = {
-    kernelParams = [
-      "nosmt"
-      "isolcpus=0-19"
-    ];
+    kernelParams = [ "nosmt" ];
   };
 
   fileSystems = {
