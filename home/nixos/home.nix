@@ -41,4 +41,12 @@
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
+
+  home.pointerCursor = lib.mkIf (pkgs.stdenv.isLinux) {
+    package = pkgs.apple-cursor;
+    name = "macOS-Monterey";
+
+    gtk.enable = true;
+    x11.enable = true;
+  };
 }
