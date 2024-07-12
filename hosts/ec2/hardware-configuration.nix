@@ -8,6 +8,7 @@
 }:
 {
   boot = {
+    kernelModules = [ "tls" ];
     kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [ "nosmt" ];
   };
