@@ -19,7 +19,6 @@
         cmake
         go-migrate
         grafana-loki
-        localstack
         neovim-remote
         sqlite
         ssm-session-manager-plugin
