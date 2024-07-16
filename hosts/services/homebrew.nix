@@ -26,7 +26,6 @@
       "1password"
       "bluesnooze"
       "cloudflare-warp"
-      "docker"
       "firefox"
       "google-drive"
       "iina"

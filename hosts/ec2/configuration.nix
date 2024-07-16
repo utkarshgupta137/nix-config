@@ -26,7 +26,6 @@
     ../services/nix-ld.nix
     ../services/oomd.nix
     ../services/sshd.nix
-    ../services/virtualisation.nix
     ./system.nix
     ./users.nix
 

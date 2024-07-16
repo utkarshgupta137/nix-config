@@ -34,7 +34,6 @@
     # ./services/sshd.nix
     # ./services/terminfo.nix
     # ./services/time.nix
-    # ./services/virtualisation.nix
     # ./services/xserver.nix
   ];
 }
