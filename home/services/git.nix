@@ -46,9 +46,6 @@
 
       gpg = {
         format = "ssh";
-        ssh = lib.mkIf (pkgs.stdenv.isDarwin) {
-          program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
-        };
       };
 
       grep.lineNumber = true;

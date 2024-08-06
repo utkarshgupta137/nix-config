@@ -20,17 +20,9 @@
     serverAliveInterval = 60;
 
     matchBlocks = {
-      "*" = lib.mkMerge [
-        (lib.optionalAttrs (pkgs.stdenv.isDarwin) {
-          extraOptions = {
-            IdentityAgent = "\"~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock\"";
-          };
-        })
-
-        (lib.optionalAttrs (pkgs.stdenv.isLinux) {
-          identityFile = "${config.home.homeDirectory}/.ssh/id_rsa";
-        })
-      ];
+      "*" = {
+        identityFile = "${config.home.homeDirectory}/.ssh/id_ed25519";
+      };
     };
   };
 
