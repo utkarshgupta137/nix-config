@@ -27,6 +27,8 @@
     };
 
     extraConfig = {
+      advice.detachedHead = false;
+
       core = {
         editor = "nvim";
       };
