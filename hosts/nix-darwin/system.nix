@@ -41,6 +41,7 @@
   system.defaults.finder.ShowPathbar = true;
   system.defaults.finder.ShowStatusBar = true;
   system.defaults.finder._FXShowPosixPathInTitle = true;
+  system.defaults.finder._FXSortFoldersFirst = true;
   system.defaults.menuExtraClock.ShowDate = 2;
   system.defaults.menuExtraClock.ShowDayOfWeek = false;
   system.defaults.menuExtraClock.ShowSeconds = true;
