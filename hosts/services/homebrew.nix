@@ -16,6 +16,7 @@
     ];
 
     brews = [
+      "graphviz"
       "libomp"
       "showkey"
       "filosottile/musl-cross/musl-cross"
@@ -30,6 +31,7 @@
       "google-drive"
       "iina"
       "itsycal"
+      "jupyterlab"
       "keyboardcleantool"
       "linear-linear"
       "notion"
