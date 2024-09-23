@@ -6,7 +6,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/master";
     # You can access packages and modules from different nixpkgs revs
     # at the same time. Here's an working example:
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixpkgs-24.05-darwin";
     # Also see the 'stable-packages' overlay at 'overlays/default.nix'.
 
     # NixOS
@@ -14,7 +14,7 @@
 
     # Nix darwin
     darwin.url = "github:LnL7/nix-darwin";
-    darwin.inputs.nixpkgs.follows = "nixpkgs";
+    darwin.inputs.nixpkgs.follows = "nixpkgs-stable";
 
     # Home manager
     home-manager.url = "github:nix-community/home-manager/master";
