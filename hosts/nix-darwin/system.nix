@@ -32,6 +32,8 @@
   system.defaults.NSGlobalDomain.PMPrintingExpandedStateForPrint = true;
   system.defaults.NSGlobalDomain.PMPrintingExpandedStateForPrint2 = true;
   system.defaults.SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
+  system.defaults.WindowManager.EnableStandardClickToShowDesktop = false;
+  system.defaults.controlcenter.BatteryShowPercentage = true;
   system.defaults.dock.mru-spaces = false;
   system.defaults.dock.tilesize = 56;
   system.defaults.finder.AppleShowAllExtensions = true;
@@ -42,6 +44,7 @@
   system.defaults.finder.ShowStatusBar = true;
   system.defaults.finder._FXShowPosixPathInTitle = true;
   system.defaults.finder._FXSortFoldersFirst = true;
+  system.defaults.finder._FXSortFoldersFirstOnDesktop = true;
   system.defaults.menuExtraClock.ShowDate = 2;
   system.defaults.menuExtraClock.ShowDayOfWeek = false;
   system.defaults.menuExtraClock.ShowSeconds = true;
