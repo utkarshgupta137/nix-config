@@ -11,10 +11,6 @@
     # example = prev.example.overrideAttrs (oldAttrs: rec {
     # ...
     # });
-
-    zellij = prev.zellij.overrideAttrs (oldAttrs: {
-      patches = (oldAttrs.patches or [ ]) ++ [ ./zellij-pr2466.diff ];
-    });
   };
 
   # When applied, the stable nixpkgs set (declared in the flake inputs) will
