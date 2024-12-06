@@ -40,7 +40,6 @@
       "qlstephen"
       "qlvideo"
       "slack"
-      "spotify"
       "steam"
       "via"
       "whatsapp"
