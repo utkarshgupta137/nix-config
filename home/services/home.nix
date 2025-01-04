@@ -30,6 +30,7 @@
         nixfmt-rfc-style
         rm-improved
         rye
+        sccache
         sd
         tokei
         # toml-merge
@@ -85,6 +86,7 @@
       NPM_CONFIG_CACHE = "${config.xdg.cacheHome}/npm";
       PYTHONPYCACHEPREFIX = "${config.xdg.cacheHome}/python";
       RUFF_CACHE_DIR = "${config.xdg.cacheHome}/ruff";
+      RUSTC_WRAPPER = "${pkgs.sccache}/bin/sccache";
       RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
       RYE_HOME = "${config.xdg.dataHome}/rye";
       WAKATIME_HOME = "${config.xdg.dataHome}/wakatime";
