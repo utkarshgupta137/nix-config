@@ -16,6 +16,7 @@ symbol = " "
 
 [cmake]
 format = "\\[[$symbol($version)]($style)\\]"
+symbol = " "
 
 [cmd_duration]
 format = "\\[[⏱ $duration]($style)\\]"
@@ -101,6 +102,7 @@ symbol = " "
 
 [gradle]
 format = "\\[[$symbol($version)]($style)\\]"
+symbol = " "
 
 [guix_shell]
 format = "\\[[$symbol]($style)\\]"
@@ -187,6 +189,7 @@ Amazon = " "
 Android = " "
 Arch = " "
 Artix = " "
+CachyOS = " "
 CentOS = " "
 Debian = " "
 DragonFly = " "
@@ -208,6 +211,7 @@ MidnightBSD = " "
 Mint = " "
 NetBSD = " "
 NixOS = " "
+Nobara = " "
 OpenBSD = "󰈺 "
 OracleLinux = "󰌷 "
 Pop = " "
