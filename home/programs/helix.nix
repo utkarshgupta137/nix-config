@@ -11,19 +11,14 @@
     enable = true;
 
     languages = {
-      language = [
-        {
-          name = "rust";
-          language-server = {
-            command = "rustup";
-            args = [
-              "run"
-              "stable"
-              "rust-analyzer"
-            ];
-          };
-        }
-      ];
+      language-server.rust-analyzer = {
+        command = "rustup";
+        args = [
+          "run"
+          "stable"
+          "rust-analyzer"
+        ];
+      };
     };
 
     settings = {
@@ -31,7 +26,6 @@
 
       editor = {
         scrolloff = 8;
-        mouse = false;
         line-number = "relative";
         cursorline = true;
         completion-replace = true;
@@ -61,6 +55,10 @@
         indent-guides = {
           render = true;
           character = "▏";
+        };
+
+        inline-diagnostics = {
+          cursor-line = "warning";
         };
       };
     };
