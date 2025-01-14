@@ -89,6 +89,7 @@
       RUSTC_WRAPPER = "${pkgs.sccache}/bin/sccache";
       RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
       RYE_HOME = "${config.xdg.dataHome}/rye";
+      SCCACHE_DIR = "${config.xdg.cacheHome}/sccache";
       WAKATIME_HOME = "${config.xdg.dataHome}/wakatime";
     };
 
