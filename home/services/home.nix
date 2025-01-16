@@ -20,7 +20,6 @@
         go-migrate
         grafana-loki
         neovim-remote
-        sqlite
         ssm-session-manager-plugin
         zstd
 
