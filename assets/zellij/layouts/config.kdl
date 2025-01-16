@@ -10,5 +10,5 @@ layout {
 
     tab name="config" cwd="~/utkarsh/nix/config" focus=true
 
-    tab name=".config" cwd="~/.config"
+    tab name="nvim" cwd="~/.config/nvim"
 }
