@@ -18,8 +18,6 @@
     withRuby = true;
   };
 
-  programs.go.enable = true;
-
   home.file.".dprint.json" = {
     source = ../../assets/dprint.json;
   };
