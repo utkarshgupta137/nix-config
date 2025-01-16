@@ -18,6 +18,7 @@
     ./programs/fd.nix
     # ./programs/feh.nix
     # ./programs/firefox.nix
+    ./programs/fzf.nix
     ./programs/gh.nix
     ./programs/gitui.nix
     # ./programs/gnome-keyring.nix
