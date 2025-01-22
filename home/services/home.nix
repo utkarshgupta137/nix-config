@@ -28,12 +28,12 @@
         just
         nixfmt-rfc-style
         rm-improved
-        rye
         sccache
         sd
         tokei
         # toml-merge
         tree-sitter
+        uv
         vivid
         xcp
 
@@ -87,7 +87,6 @@
       RUFF_CACHE_DIR = "${config.xdg.cacheHome}/ruff";
       RUSTC_WRAPPER = "${pkgs.sccache}/bin/sccache";
       RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
-      RYE_HOME = "${config.xdg.dataHome}/rye";
       SCCACHE_DIR = "${config.xdg.cacheHome}/sccache";
       WAKATIME_HOME = "${config.xdg.dataHome}/wakatime";
     };
