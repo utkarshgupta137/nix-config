@@ -39,6 +39,7 @@
       "qbittorrent"
       "qlstephen"
       "qlvideo"
+      "signal"
       "slack"
       "steam"
       "via"
