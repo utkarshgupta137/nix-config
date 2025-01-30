@@ -42,7 +42,6 @@
         cargo-cranky
         cargo-criterion
         cargo-deny
-        cargo-expand
         cargo-flamegraph
         cargo-hack
         cargo-machete
