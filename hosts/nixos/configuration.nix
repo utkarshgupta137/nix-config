@@ -21,18 +21,10 @@
     # You can also split up your configuration and import pieces of it here:
     ../common.nix
     ../hardware/audio.nix
-    ../hardware/bluetooth.nix
     ../hardware/boot.nix
     ../hardware/fingerprint.nix
-    ../hardware/networking.nix
-    ../hardware/opengl.nix
-    ../hardware/power.nix
-    ../hardware/qmk.nix
-    ../hardware/video.nix
     ../services/chrony.nix
-    ../services/gnome-keyring.nix
     ../services/i18n.nix
-    ../services/interception-tools.nix
     ../services/nix-ld.nix
     ../services/oomd.nix
     ../services/time.nix
