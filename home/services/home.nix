@@ -42,20 +42,24 @@
         cargo-cranky
         cargo-criterion
         cargo-deny
-        cargo-flamegraph
         cargo-hack
         cargo-machete
         cargo-nextest
         cargo-sweep
         cargo-watch
       ]
-      ++ lib.optionals (pkgs.stdenv.isDarwin) [ pinentry_mac ]
+      ++ lib.optionals (pkgs.stdenv.isDarwin) [
+        pinentry_mac
+
+        cargo-flamegraph
+      ]
       ++ lib.optionals (pkgs.stdenv.isLinux) [
         gcc
         gnumake
         patchelf
+        qbittorrent
         unzip
-        # xclip
+        xclip
       ];
 
     preferXdgDirectories = true;
