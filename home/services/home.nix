@@ -51,20 +51,11 @@
       ]
       ++ lib.optionals (pkgs.stdenv.isDarwin) [ pinentry_mac ]
       ++ lib.optionals (pkgs.stdenv.isLinux) [
-        # efibootmgr
         gcc
         gnumake
         patchelf
-        # playerctl
         unzip
         # xclip
-
-        vector
-
-        # discord
-        # gnome.gnome-calculator
-        # gnome.gnome-screenshot
-        # spotify
       ];
 
     preferXdgDirectories = true;

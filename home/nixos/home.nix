@@ -20,18 +20,6 @@
     # You can also split up your configuration and import pieces of it here:
     ../common.nix
     ../programs/alacritty.nix
-    ../programs/blueman-applet.nix
-    ../programs/dunst.nix
-    ../programs/feh.nix
-    ../programs/firefox.nix
-    ../programs/gnome-keyring.nix
-    ../programs/network-manager-applet.nix
-    ../programs/picom.nix
-    ../programs/playerctl.nix
-    ../programs/polybar.nix
-    ../programs/rofi.nix
-    ../services/screen-locker.nix
-    ../services/xsession.nix
   ];
 
   home = {
@@ -41,12 +29,4 @@
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
-
-  home.pointerCursor = lib.mkIf (pkgs.stdenv.isLinux) {
-    package = pkgs.apple-cursor;
-    name = "macOS-Monterey";
-
-    gtk.enable = true;
-    x11.enable = true;
-  };
 }
