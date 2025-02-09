@@ -20,7 +20,7 @@
         bold.style = "SemiBold";
         italic.style = "Medium Italic";
 
-        size = if (pkgs.stdenv.isDarwin) then 13 else 6;
+        size = 13;
       };
 
       colors.draw_bold_text_with_bright_colors = true;
