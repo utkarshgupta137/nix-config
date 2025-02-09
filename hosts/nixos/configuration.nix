@@ -20,13 +20,14 @@
 
     # You can also split up your configuration and import pieces of it here:
     ../common.nix
-    ../hardware/audio.nix
-    ../hardware/boot.nix
-    ../hardware/fingerprint.nix
     ../services/chrony.nix
+    ../services/evremap.nix
     ../services/i18n.nix
     ../services/nix-ld.nix
     ../services/oomd.nix
+    ../services/pipewire.nix
+    ../services/plex.nix
+    ../services/printing.nix
     ../services/time.nix
     ../services/xserver.nix
     ./system.nix
