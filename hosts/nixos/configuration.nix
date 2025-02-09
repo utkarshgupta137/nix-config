@@ -20,10 +20,13 @@
 
     # You can also split up your configuration and import pieces of it here:
     ../common.nix
+    ../programs/_1password-gui.nix
+    ../programs/firefox.nix
+    ../programs/nix-ld.nix
+    ../programs/steam.nix
     ../services/chrony.nix
     ../services/evremap.nix
     ../services/i18n.nix
-    ../services/nix-ld.nix
     ../services/oomd.nix
     ../services/pipewire.nix
     ../services/plex.nix

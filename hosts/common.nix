@@ -8,6 +8,10 @@
 }:
 {
   imports = [
+    # ./programs/_1password-gui.nix
+    # ./programs/firefox.nix
+    # ./programs/nix-ld.nix
+    # ./programs/steam.nix
 
     # ./services/chrony.nix
     # ./services/evremap.nix
@@ -16,11 +20,11 @@
     # ./services/i18n.nix
     # ./services/karabiner.nix
     # ./services/networking.nix
-    # ./services/nix-ld.nix
     ./services/nix.nix
     ./services/nixpkgs.nix
     # ./services/oomd.nix
     # ./services/pipewire.nix
+    # ./services/plex.nix
     # ./services/printing.nix
     ./services/shell.nix
     # ./services/sshd.nix

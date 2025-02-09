@@ -21,9 +21,9 @@
 
     # You can also split up your configuration and import pieces of it here:
     ../common.nix
+    ../programs/nix-ld.nix
     ../services/chrony.nix
     ../services/i18n.nix
-    ../services/nix-ld.nix
     ../services/oomd.nix
     ../services/sshd.nix
     ./system.nix
