@@ -27,7 +27,7 @@
 
       selection.save_to_clipboard = true;
 
-      mouse.hide_when_typing = true;
+      mouse.hide_when_typing = if (pkgs.stdenv.isDarwin) then true else false;
 
       keyboard.bindings =
         [
