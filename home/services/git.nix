@@ -46,10 +46,6 @@
 
       format.pretty = "oneline";
 
-      gpg = {
-        format = "ssh";
-      };
-
       grep.lineNumber = true;
 
       init.defaultBranch = "main";
@@ -89,6 +85,7 @@
 
     signing = {
       key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIle2H+nw/MkMbQ8Ykzus/7WaLH5HqC/PGoquo+5QriF";
+      format = "ssh";
       signByDefault = true;
     };
 
