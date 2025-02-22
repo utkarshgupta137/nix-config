@@ -82,27 +82,6 @@
             chars = "\\u001B)";
           }
 
-          {
-            key = "T";
-            mods = "Command";
-            chars = "\\u001BT";
-          }
-          {
-            key = "N";
-            mods = "Command";
-            chars = "\\u001BN";
-          }
-          {
-            key = "T";
-            mods = "Command|Shift";
-            action = "CreateNewTab";
-          }
-          {
-            key = "N";
-            mods = "Command|Shift";
-            action = "CreateNewWindow";
-          }
-
           # Ref: https://stackoverflow.com/questions/16359878/how-to-map-shift-enter
           {
             key = "Return";
@@ -142,17 +121,53 @@
             mods = "Command";
             action = "None";
           }
+
+          {
+            key = "T";
+            mods = "Command";
+            chars = "\\u001BT";
+          }
+          {
+            key = "N";
+            mods = "Command";
+            chars = "\\u001BN";
+          }
+          {
+            key = "T";
+            mods = "Command|Shift";
+            action = "CreateNewTab";
+          }
+          {
+            key = "N";
+            mods = "Command|Shift";
+            action = "CreateNewWindow";
+          }
         ]
         ++ lib.optionals (pkgs.stdenv.isLinux) [
           {
             key = "C";
-            mods = "Command";
+            mods = "Super";
             action = "Copy";
           }
           {
             key = "V";
-            mods = "Command";
+            mods = "Super";
             action = "Paste";
+          }
+          {
+            key = "T";
+            mods = "Super";
+            chars = "\\u001BT";
+          }
+          {
+            key = "N";
+            mods = "Super";
+            chars = "\\u001BN";
+          }
+          {
+            key = "N";
+            mods = "Super|Shift";
+            action = "CreateNewWindow";
           }
         ];
     };
