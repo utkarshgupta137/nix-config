@@ -13,7 +13,7 @@
     computerName = "utkarsh-mbp";
   };
 
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   # System settings
   system.defaults.NSGlobalDomain.AppleInterfaceStyle = "Dark";
