@@ -57,9 +57,11 @@
         gcc
         gnumake
         patchelf
-        qbittorrent
         unzip
         xclip
+
+        pocket-casts
+        qbittorrent
       ];
 
     preferXdgDirectories = true;
