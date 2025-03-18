@@ -35,6 +35,7 @@
       "keyboardcleantool"
       "linear-linear"
       "notion"
+      "pocket-casts"
       "postman"
       "qbittorrent"
       "qlstephen"
