@@ -62,6 +62,7 @@
 
         pocket-casts
         qbittorrent
+        signal-desktop
       ];
 
     preferXdgDirectories = true;
