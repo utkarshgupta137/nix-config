@@ -32,6 +32,7 @@
     ../services/plex.nix
     ../services/printing.nix
     ../services/time.nix
+    ../services/virtualisation.nix
     ../services/xserver.nix
     ./system.nix
     ./users.nix
