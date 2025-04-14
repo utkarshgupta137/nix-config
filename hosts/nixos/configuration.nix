@@ -26,6 +26,7 @@
     ../programs/steam.nix
     ../services/chrony.nix
     ../services/evremap.nix
+    ../services/firewall.nix
     ../services/i18n.nix
     ../services/oomd.nix
     ../services/pipewire.nix
