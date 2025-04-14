@@ -16,6 +16,7 @@
     # ./services/chrony.nix
     # ./services/evremap.nix
     ./services/fonts.nix
+    # ./services/firewall.nix
     # ./services/homebrew.nix
     # ./services/i18n.nix
     # ./services/karabiner.nix
