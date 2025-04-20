@@ -63,6 +63,7 @@
         pocket-casts
         qbittorrent
         signal-desktop
+        sqlitebrowser
       ];
 
     preferXdgDirectories = true;
