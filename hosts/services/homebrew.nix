@@ -11,7 +11,6 @@
     enable = true;
 
     taps = [
-      "filosottile/musl-cross"
       "vectordotdev/brew"
     ];
 
@@ -19,7 +18,6 @@
       "graphviz"
       "libomp"
       "showkey"
-      "filosottile/musl-cross/musl-cross"
       "vectordotdev/brew/vector"
     ];
 
@@ -27,6 +25,7 @@
       "1password"
       "bluesnooze"
       "cloudflare-warp"
+      "db-browser-for-sqlite"
       "firefox"
       "google-drive"
       "iina"
