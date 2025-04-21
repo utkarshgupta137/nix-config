@@ -29,6 +29,7 @@
     ./programs/ripgrep.nix
     ./programs/starship.nix
     ./programs/tealdeer.nix
+    ./programs/uv.nix
     ./programs/zellij.nix
     ./programs/zoxide.nix
 

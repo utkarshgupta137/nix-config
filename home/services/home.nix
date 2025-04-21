@@ -33,7 +33,6 @@
         tokei
         # toml-merge
         tree-sitter
-        uv
         vivid
         websocat
         xcp
