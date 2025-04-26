@@ -24,6 +24,7 @@
         zstd
 
         bandwhich
+        bmon
         dprint
         just
         nixfmt-rfc-style
