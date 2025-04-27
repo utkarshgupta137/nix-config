@@ -7,7 +7,7 @@
   ...
 }:
 {
-  time.hardwareClockInLocalTime = true;
+  time.hardwareClockInLocalTime = false;
 
   time.timeZone = "Europe/Dublin";
 }
