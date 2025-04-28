@@ -98,9 +98,9 @@
       n = "nvim";
       nv = "nvim";
       j = "zellij";
-      jcf = "zellij -l config a -c config";
-      jfx = "zellij -l tfx a -c tfx";
-      jtf = "zellij -l tf a -c tf options --pane-frames=true";
+      jcf = "zellij -l config attach -c config options --no-pane-frames";
+      jfx = "zellij -l tfx attach -c tfx options --no-pane-frames";
+      jtf = "zellij -l tf attach -c tf";
     };
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
