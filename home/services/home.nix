@@ -98,9 +98,6 @@
       n = "nvim";
       nv = "nvim";
       j = "zellij";
-      ja = "zellij -l alacritty a -c alacritty";
-      jcli = "zellij -l cli a -c cli";
-      jj = "zellij -l zellij a -c zellij";
       jcf = "zellij -l config a -c config";
       jfx = "zellij -l tfx a -c tfx";
       jtf = "zellij -l tf a -c tf options --pane-frames=true";
