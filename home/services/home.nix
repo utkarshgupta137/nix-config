@@ -98,6 +98,7 @@
       n = "nvim";
       nv = "nvim";
       j = "zellij";
+      jr = "zellij -l rsky attach -c rsky options --no-pane-frames";
       jcf = "zellij -l config attach -c config options --no-pane-frames";
       jfx = "zellij -l tfx attach -c tfx options --no-pane-frames";
       jtf = "zellij -l tf attach -c tf";
