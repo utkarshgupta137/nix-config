@@ -9,6 +9,7 @@ symbol = " "
 
 [bun]
 format = "\\[[$symbol($version)]($style)\\]"
+symbol = " "
 
 [c]
 format = "\\[[$symbol($version(-$name))]($style)\\]"
@@ -28,6 +29,10 @@ format = "\\[[$symbol($version)]($style)\\]"
 format = "\\[[$symbol$environment]($style)\\]"
 symbol = " "
 
+[cpp]
+format = "\\[[$symbol($version(-$name))]($style)\\]"
+symbol = " "
+
 [crystal]
 format = "\\[[$symbol($version)]($style)\\]"
 symbol = " "
@@ -41,6 +46,7 @@ symbol = " "
 
 [deno]
 format = "\\[[$symbol($version)]($style)\\]"
+symbol = " "
 
 [directory]
 read_only = " 󰌾"
@@ -78,6 +84,7 @@ symbol = " "
 
 [gcloud]
 format = "\\[[$symbol$account(@$domain)(\\($region\\))]($style)\\]"
+symbol = "  "
 
 [git_branch]
 format = "\\[[$symbol$branch]($style)\\]"
@@ -243,6 +250,10 @@ symbol = " "
 [pijul_channel]
 format = "\\[[$symbol$channel]($style)\\]"
 symbol = " "
+
+[pixi]
+format = "\\[[$symbol$version( $environment)]($style)\\]"
+symbol = "󰏗 "
 
 [pulumi]
 format = "\\[[$symbol$stack]($style)\\]"
