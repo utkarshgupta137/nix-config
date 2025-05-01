@@ -74,6 +74,7 @@
       AWS_CONFIG_FILE = "${config.xdg.configHome}/aws/config";
       CARGO_HOME = "${config.xdg.dataHome}/cargo";
       CARGO_NET_GIT_FETCH_WITH_CLI = "true";
+      CARGO_TARGET_DIR = "${config.xdg.cacheHome}/cargo";
       DPRINT_CACHE_DIR = "${config.xdg.cacheHome}/dprint";
       GOPATH = "${config.xdg.dataHome}/go";
       GRANTED_ALIAS_CONFIGURED = "true";
