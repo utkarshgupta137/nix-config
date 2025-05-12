@@ -16,7 +16,8 @@
           selectedRangeBgColor = [ "reverse" ];
         };
 
-        showIcons = true;
+        showNumstatInFilesView = true;
+        nerdFontsVersion = "3";
       };
 
       git = {
@@ -24,6 +25,8 @@
           colorArg = "always";
           pager = "delta --dark --paging=never";
         };
+
+        autoForwardBranches = "allBranches";
       };
 
       os = {
