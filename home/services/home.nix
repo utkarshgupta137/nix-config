@@ -86,6 +86,7 @@
       PYTHONPYCACHEPREFIX = "${config.xdg.cacheHome}/python";
       RUFF_CACHE_DIR = "${config.xdg.cacheHome}/ruff";
       RUSTC_WRAPPER = "${pkgs.sccache}/bin/sccache";
+      RUSTUP_AUTO_INSTALL = "0";
       RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
       SCCACHE_DIR = "${config.xdg.cacheHome}/sccache";
       WAKATIME_HOME = "${config.xdg.dataHome}/wakatime";
