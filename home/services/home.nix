@@ -94,7 +94,7 @@
 
     shellAliases = {
       l = "lsd -al";
-      nixdarwin = "darwin-rebuild --flake ~/utkarsh/nix/config switch";
+      nixdarwin = "sudo darwin-rebuild --flake ~/utkarsh/nix/config switch";
       nixlinux = "sudo nixos-rebuild --flake ~/utkarsh/nix/config switch";
       nixhome = "home-manager --flake ~/utkarsh/nix/config switch";
       n = "nvim";
