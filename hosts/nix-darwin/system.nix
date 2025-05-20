@@ -13,6 +13,8 @@
     computerName = "utkarsh-mbp";
   };
 
+  system.primaryUser = "utkarsh";
+
   security.pam.services.sudo_local.touchIdAuth = true;
 
   # System settings
