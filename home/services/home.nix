@@ -38,6 +38,7 @@
         xcp
 
         rustup
+        uutils-coreutils-noprefix
         cargo-audit
         cargo-cranky
         cargo-criterion
