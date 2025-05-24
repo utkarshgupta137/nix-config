@@ -32,7 +32,6 @@
         sccache
         sd
         tokei
-        # toml-merge
         tree-sitter
         vivid
         websocat
