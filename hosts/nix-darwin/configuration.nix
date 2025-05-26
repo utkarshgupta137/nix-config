@@ -19,7 +19,6 @@
     ../services/homebrew.nix
     ../services/karabiner.nix
     ../services/networking.nix
-    ../services/terminfo.nix
     ./system.nix
   ];
 }
