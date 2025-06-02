@@ -33,6 +33,7 @@
         sd
         tokei
         tree-sitter
+        uutils-coreutils-noprefix
         vivid
         websocat
         xcp
