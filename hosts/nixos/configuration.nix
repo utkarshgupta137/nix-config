@@ -32,6 +32,7 @@
     ../services/pipewire.nix
     ../services/plex.nix
     ../services/printing.nix
+    ../services/tailscale.nix
     ../services/time.nix
     ../services/virtualisation.nix
     ../services/xserver.nix

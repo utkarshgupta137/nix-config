@@ -42,6 +42,7 @@
       "signal"
       "slack"
       "steam"
+      "tailscale"
       "via"
       "whatsapp"
       "wireshark"
