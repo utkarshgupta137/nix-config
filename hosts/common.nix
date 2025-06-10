@@ -29,6 +29,7 @@
     # ./services/printing.nix
     ./services/shell.nix
     # ./services/sshd.nix
+    # ./services/tailscale.nix
     # ./services/time.nix
     # ./services/virtualisation.nix
     # ./services/xserver.nix
