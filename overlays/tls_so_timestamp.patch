@@ -1,0 +1,94 @@
+diff --git a/net/tls/tls_sw.c b/net/tls/tls_sw.c
+index 914d4e1516a3c..f67d007ff545d 100644
+--- a/net/tls/tls_sw.c
++++ b/net/tls/tls_sw.c
+@@ -40,6 +40,8 @@
+ #include <linux/module.h>
+ #include <linux/kernel.h>
+ #include <linux/splice.h>
++#include <linux/socket.h>
++#include <linux/time.h>
+ #include <crypto/aead.h>
+ 
+ #include <net/strparser.h>
+@@ -1784,7 +1786,7 @@ int decrypt_skb(struct sock *sk, struct scatterlist *sgout)
+ }
+ 
+ static int tls_record_content_type(struct msghdr *msg, struct tls_msg *tlm,
+-				   u8 *control)
++				   u8 *control, struct sock *sk, struct sk_buff *skb)
+ {
+ 	int err;
+ 
+@@ -1793,10 +1795,9 @@ static int tls_record_content_type(struct msghdr *msg, struct tls_msg *tlm,
+ 		if (!*control)
+ 			return -EBADMSG;
+ 
+-		err = put_cmsg(msg, SOL_TLS, TLS_GET_RECORD_TYPE,
+-			       sizeof(*control), control);
++		sock_recv_timestamp(msg, sk, skb);
+ 		if (*control != TLS_RECORD_TYPE_DATA) {
+-			if (err || msg->msg_flags & MSG_CTRUNC)
++			if (msg->msg_flags & MSG_CTRUNC)
+ 				return -EIO;
+ 		}
+ 	} else if (*control != tlm->control) {
+@@ -1816,7 +1817,8 @@ static void tls_rx_rec_done(struct tls_sw_context_rx *ctx)
+  * true. Further, the records are removed from the rx_list if it is not a peek
+  * case and the record has been consumed completely.
+  */
+-static int process_rx_list(struct tls_sw_context_rx *ctx,
++static int process_rx_list(struct sock *sk,
++	struct tls_sw_context_rx *ctx,
+ 			   struct msghdr *msg,
+ 			   u8 *control,
+ 			   size_t skip,
+@@ -1833,7 +1835,7 @@ static int process_rx_list(struct tls_sw_context_rx *ctx,
+ 		struct strp_msg *rxm = strp_msg(skb);
+ 		tlm = tls_msg(skb);
+ 
+-		err = tls_record_content_type(msg, tlm, control);
++		err = tls_record_content_type(msg, tlm, control, sk, skb);
+ 		if (err <= 0)
+ 			goto more;
+ 
+@@ -1851,7 +1853,7 @@ static int process_rx_list(struct tls_sw_context_rx *ctx,
+ 
+ 		tlm = tls_msg(skb);
+ 
+-		err = tls_record_content_type(msg, tlm, control);
++		err = tls_record_content_type(msg, tlm, control, sk, skb);
+ 		if (err <= 0)
+ 			goto more;
+ 
+@@ -2022,7 +2024,7 @@ int tls_sw_recvmsg(struct sock *sk,
+ 		goto end;
+ 
+ 	/* Process pending decrypted records. It must be non-zero-copy */
+-	err = process_rx_list(ctx, msg, &control, 0, len, is_peek, &rx_more);
++	err = process_rx_list(sk, ctx, msg, &control, 0, len, is_peek, &rx_more);
+ 	if (err < 0)
+ 		goto end;
+ 
+@@ -2087,7 +2089,7 @@ int tls_sw_recvmsg(struct sock *sk,
+ 		 * is known just after record is dequeued from stream parser.
+ 		 * For tls1.3, we disable async.
+ 		 */
+-		err = tls_record_content_type(msg, tls_msg(darg.skb), &control);
++		err = tls_record_content_type(msg, tls_msg(darg.skb), &control, sk, darg.skb);
+ 		if (err <= 0) {
+ 			DEBUG_NET_WARN_ON_ONCE(darg.zc);
+ 			tls_rx_rec_done(ctx);
+@@ -2186,10 +2188,10 @@ int tls_sw_recvmsg(struct sock *sk,
+ 
+ 		/* Drain records from the rx_list & copy if required */
+ 		if (is_peek)
+-			err = process_rx_list(ctx, msg, &control, copied + peeked,
++			err = process_rx_list(sk, ctx, msg, &control, copied + peeked,
+ 					      decrypted - peeked, is_peek, NULL);
+ 		else
+-			err = process_rx_list(ctx, msg, &control, 0,
++			err = process_rx_list(sk, ctx, msg, &control, 0,
+ 					      async_copy_bytes, is_peek, NULL);
+ 
+ 		/* we could have copied less than we wanted, and possibly nothing */
