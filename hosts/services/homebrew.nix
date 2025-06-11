@@ -34,6 +34,7 @@
       "keyboardcleantool"
       "linear-linear"
       "notion"
+      "plex"
       "pocket-casts"
       "postman"
       "qbittorrent"
