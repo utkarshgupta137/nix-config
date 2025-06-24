@@ -30,7 +30,7 @@
       "google-drive"
       "iina"
       "itsycal"
-      "jupyterlab"
+      "jupyterlab-app"
       "keyboardcleantool"
       "linear-linear"
       "notion"
@@ -43,10 +43,10 @@
       "signal"
       "slack"
       "steam"
-      "tailscale"
+      "tailscale-app"
       "via"
       "whatsapp"
-      "wireshark"
+      "wireshark-app"
     ];
 
     global.brewfile = true;
