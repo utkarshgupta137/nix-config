@@ -130,9 +130,6 @@ format = "\\[[$symbol($version)]($style)\\]"
 format = "\\[[$symbol$branch]($style)\\]"
 symbol = " "
 
-[hg_state]
-format = "\\([$state]($style)\\) "
-
 [hostname]
 format = "\\[[$ssh_symbol($hostname)]($style)\\] "
 ssh_symbol = " "
@@ -193,7 +190,6 @@ format = "\\[[$symbol$cloud(\\($project\\))]($style)\\]"
 format = "\\[[$symbol]($style)\\]"
 
 [os.symbols]
-AOSC = " "
 AlmaLinux = " "
 Alpaquita = " "
 Alpine = " "
