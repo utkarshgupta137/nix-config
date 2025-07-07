@@ -36,7 +36,6 @@
         uutils-coreutils-noprefix
         vivid
         websocat
-        xcp
 
         rustup
         cargo-audit
