@@ -25,7 +25,7 @@
     enable = true;
 
     shellInit = ''
-      source ~/tensorfox/env.fish
+      source ~/whistler/env.fish
 
       fish_add_path $CARGO_HOME/bin
 

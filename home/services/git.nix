@@ -41,7 +41,6 @@
 
       fetch = {
         prune = true;
-        pruneTags = true;
       };
 
       format.pretty = "oneline";
@@ -70,10 +69,10 @@
 
     includes = [
       {
-        condition = "gitdir:~/tensorfox/";
+        condition = "gitdir:~/whistler/";
         contents = {
           user = {
-            email = "utkarsh.gupta@tensorfox.com";
+            email = "utkarsh@whistlertrading.com";
           };
         };
       }
