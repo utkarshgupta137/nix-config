@@ -16,6 +16,7 @@
         description = "Utkarsh Gupta";
         extraGroups = [
           "audio"
+          "docker"
           "input"
           "networkmanager"
           "storage"
