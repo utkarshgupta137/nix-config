@@ -13,11 +13,13 @@
     settings = {
       delay = 10;
       fields = with config.lib.htop.fields; [
+        PROCESSOR
+        CTXT
         PID
         PRIORITY
         NICE
         USER
-        M_SIZE
+        M_VIRT
         M_RESIDENT
         M_SHARE
         PERCENT_CPU
