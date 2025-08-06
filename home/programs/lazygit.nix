@@ -18,15 +18,19 @@
 
         showNumstatInFilesView = true;
         nerdFontsVersion = "3";
+        commitHashLength = 7;
+        showBranchCommitHash = true;
+        showDivergenceFromBaseBranch = "arrowAndNumber";
       };
 
       git = {
         paging = {
-          colorArg = "always";
           pager = "delta --dark --paging=never";
         };
 
         autoForwardBranches = "allBranches";
+        ignoreWhitespaceInDiffView = true;
+        renameSimilarityThreshold = 20;
       };
 
       os = {
