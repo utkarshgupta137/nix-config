@@ -45,6 +45,7 @@
         cargo-hack
         cargo-machete
         cargo-nextest
+        cargo-shear
         cargo-show-asm
         cargo-sweep
         cargo-watch
