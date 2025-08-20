@@ -31,6 +31,7 @@
         autoForwardBranches = "allBranches";
         ignoreWhitespaceInDiffView = true;
         renameSimilarityThreshold = 20;
+        overrideGpg = true;
       };
 
       os = {
