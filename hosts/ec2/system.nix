@@ -19,6 +19,12 @@
         type = "-";
         value = "65536";
       }
+      {
+        domain = "*";
+        item = "memlock";
+        type = "-";
+        value = "unlimited";
+      }
     ];
     sudo.extraConfig = ''
       Defaults timestamp_timeout=60
