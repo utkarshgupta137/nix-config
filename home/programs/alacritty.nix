@@ -10,6 +10,8 @@
   programs.alacritty = {
     enable = true;
 
+    package = lib.mkIf (pkgs.stdenv.isDarwin) null; # installed via brew
+
     settings = {
       window.option_as_alt = lib.mkIf (pkgs.stdenv.isDarwin) "Both";
 

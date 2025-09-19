@@ -23,6 +23,7 @@
 
     casks = [
       "1password"
+      "alacritty"
       "bluesnooze"
       "cloudflare-warp"
       "db-browser-for-sqlite"
