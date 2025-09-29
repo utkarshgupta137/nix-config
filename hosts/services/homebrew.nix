@@ -35,6 +35,7 @@
       "keyboardcleantool"
       "linear-linear"
       "notion"
+      "obsidian"
       "plex"
       "pocket-casts"
       "postman"

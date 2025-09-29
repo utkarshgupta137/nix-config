@@ -26,6 +26,7 @@
     ./programs/lsd.nix
     ./programs/navi.nix
     ./programs/neovim.nix
+    ./programs/obsidian.nix
     ./programs/ripgrep.nix
     ./programs/starship.nix
     ./programs/tealdeer.nix
