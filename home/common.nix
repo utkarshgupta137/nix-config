@@ -13,6 +13,7 @@
     ./programs/bat.nix
     ./programs/bottom.nix
     ./programs/broot.nix
+    ./programs/delta.nix
     ./programs/fd.nix
     ./programs/fzf.nix
     ./programs/gh.nix
