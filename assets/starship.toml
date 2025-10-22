@@ -4,7 +4,14 @@
 format = "\\[[$symbol($profile)(\\($region\\))(\\[$duration\\])]($style)\\]"
 symbol = " "
 
+[azure]
+format = "\\[[$symbol($subscription)]($style)\\]"
+
+[battery]
+format = "\\[[$symbol$percentage]($style)\\]"
+
 [buf]
+format = "\\[[$symbol($version)]($style)\\]"
 symbol = " "
 
 [bun]
@@ -28,6 +35,9 @@ format = "\\[[$symbol($version)]($style)\\]"
 [conda]
 format = "\\[[$symbol$environment]($style)\\]"
 symbol = " "
+
+[container]
+format = "\\[[$symbol \\[$name\\]]($style)\\]"
 
 [cpp]
 format = "\\[[$symbol($version(-$name))]($style)\\]"
@@ -56,6 +66,9 @@ controller = "ctl"
 crosschain = "xc"
 galleon = "tfx"
 
+[direnv]
+format = "\\[[$symbol$loaded/$allowed]($style)\\]"
+
 [docker_context]
 format = "\\[[$symbol$context]($style)\\]"
 symbol = " "
@@ -78,19 +91,27 @@ format = "\\[[$symbol($version)]($style)\\]"
 format = "\\[[$symbol($version)]($style)\\]"
 symbol = " "
 
+[fortran]
+format = "\\[[$symbol($version)]($style)\\]"
+symbol = " "
+
 [fossil_branch]
 format = "\\[[$symbol$branch]($style)\\]"
 symbol = " "
 
+[fossil_metrics]
+format = "\\[[+$added]($added_style)\\]\\[[-$deleted]($deleted_style)\\]"
+
 [gcloud]
 format = "\\[[$symbol$account(@$domain)(\\($region\\))]($style)\\]"
-symbol = "  "
+symbol = " "
 
 [git_branch]
 format = "\\[[$symbol$branch]($style)\\]"
 symbol = " "
 
 [git_commit]
+format = "\\[[\\($hash$tag\\)]($style)\\]"
 tag_disabled = false
 tag_symbol = "  "
 
@@ -99,9 +120,15 @@ disabled = false
 format = "\\[([+$added]($added_style) )([-$deleted]($deleted_style))\\]"
 ignore_submodules = true
 
+[git_state]
+format = "\\[[$state ($progress_current/$progress_total)]($style)\\]"
+
 [git_status]
 format = "([\\[$all_status$ahead_behind\\]]($style))"
 ignore_submodules = true
+
+[gleam]
+format = "\\[[$symbol($version)]($style)\\]"
 
 [golang]
 format = "\\[[$symbol($version)]($style)\\]"
@@ -138,6 +165,9 @@ ssh_symbol = " "
 format = "\\[[$symbol($version)]($style)\\]"
 symbol = " "
 
+[jobs]
+format = "\\[[$symbol$number]($style)\\]"
+
 [julia]
 format = "\\[[$symbol($version)]($style)\\]"
 symbol = " "
@@ -148,6 +178,9 @@ symbol = " "
 
 [kubernetes]
 format = "\\[[$symbol$context( \\($namespace\\))]($style)\\]"
+
+[localip]
+format = "\\[[$localipv4]($style)\\]"
 
 [lua]
 format = "\\[[$symbol($version)]($style)\\]"
@@ -162,6 +195,18 @@ threshold = 85
 [meson]
 format = "\\[[$symbol$project]($style)\\]"
 symbol = "󰔷 "
+
+[mise]
+format = "\\[[$symbol$health]($style)\\]"
+
+[mojo]
+format = "\\[[$symbol($version)]($style)\\]"
+
+[nats]
+format = "\\[[$symbol$name]($style)\\]"
+
+[netns]
+format = "\\[[$symbol \\[$name\\]]($style)\\]"
 
 [nim]
 format = "\\[[$symbol($version)]($style)\\]"
@@ -180,6 +225,9 @@ symbol = " "
 format = "\\[[$symbol($version)(\\($switch_indicator$switch_name\\))]($style)\\]"
 symbol = " "
 
+[odin]
+format = "\\[[$symbol($version )]($style)\\]"
+
 [opa]
 format = "\\[[$symbol($version)]($style)\\]"
 
@@ -190,6 +238,7 @@ format = "\\[[$symbol$cloud(\\($project\\))]($style)\\]"
 format = "\\[[$symbol]($style)\\]"
 
 [os.symbols]
+AOSC = " "
 AlmaLinux = " "
 Alpaquita = " "
 Alpine = " "
@@ -266,6 +315,9 @@ format = "\\[[$symbol($version)]($style)\\]"
 format = "\\[[${symbol}${pyenv_prefix}(${version})(\\($virtualenv\\))]($style)\\]"
 symbol = " "
 
+[quarto]
+format = "\\[[$symbol($version)]($style)\\]"
+
 [raku]
 format = "\\[[$symbol($version-$vm_version)]($style)\\]"
 
@@ -273,6 +325,7 @@ format = "\\[[$symbol($version-$vm_version)]($style)\\]"
 format = "\\[[$symbol($version)]($style)\\]"
 
 [rlang]
+format = "\\[[$symbol($version)]($style)\\]"
 symbol = "󰟔 "
 
 [ruby]
@@ -287,9 +340,15 @@ symbol = "󱘗 "
 format = "\\[[$symbol($version)]($style)\\]"
 symbol = " "
 
+[shell]
+format = "\\[[$indicator]($style)\\]"
+
 [shlvl]
 disabled = false
 threshold = 3
+
+[singularity]
+format = "\\[[$symbol\\[$env\\]]($style)\\]"
 
 [solidity]
 format = "\\[[$symbol($version)]($style)\\]"
@@ -302,6 +361,7 @@ disabled = false
 format = "\\[[$symbol$status]($style)\\]"
 map_symbol = true
 pipestatus = true
+symbol = " "
 
 [sudo]
 disabled = false
@@ -319,14 +379,24 @@ disabled = false
 format = "\\[[$time]($style)\\]"
 time_format = "%R"
 
+[typst]
+format = "\\[[$symbol($version)]($style)\\]"
+
 [username]
 format = "\\[[$user]($style)\\]"
 
 [vagrant]
 format = "\\[[$symbol($version)]($style)\\]"
 
+[vcsh]
+format = "\\[vcsh [$symbol$repo]($style)\\]"
+
 [vlang]
 format = "\\[[$symbol($version)]($style)\\]"
+
+[xmake]
+format = "\\[[$symbol($version)]($style)\\]"
+symbol = " "
 
 [zig]
 format = "\\[[$symbol($version)]($style)\\]"
