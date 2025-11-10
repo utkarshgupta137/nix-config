@@ -24,9 +24,11 @@
       };
 
       git = {
-        paging = {
-          pager = "delta --dark --paging=never";
-        };
+        paging = [
+          {
+            pager = "delta --dark --paging=never";
+          }
+        ];
 
         autoForwardBranches = "allBranches";
         ignoreWhitespaceInDiffView = true;
