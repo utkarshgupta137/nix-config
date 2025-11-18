@@ -44,6 +44,7 @@
   system.defaults.finder.FXPreferredViewStyle = "clmv";
   system.defaults.finder.ShowPathbar = true;
   system.defaults.finder.ShowStatusBar = true;
+  system.defaults.finder._FXEnableColumnAutoSizing = true;
   system.defaults.finder._FXShowPosixPathInTitle = true;
   system.defaults.finder._FXSortFoldersFirst = true;
   system.defaults.finder._FXSortFoldersFirstOnDesktop = true;
