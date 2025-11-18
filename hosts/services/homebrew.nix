@@ -36,6 +36,7 @@
       "linear-linear"
       "notion"
       "obsidian"
+      "orion"
       "plex"
       "pocket-casts"
       "postman"
