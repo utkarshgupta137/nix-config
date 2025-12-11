@@ -10,7 +10,7 @@
   programs.gitui = {
     enable = true;
 
-    keyConfig = ''
+    keyConfig = /* ron */ ''
       (
           open_help: Some(( code: F(1), modifiers: ( bits: 0,),)),
 
@@ -46,7 +46,7 @@
       )
     '';
 
-    theme = ''
+    theme = /* ron */ ''
       (
           selected_tab: Reset,
           command_fg: White,
