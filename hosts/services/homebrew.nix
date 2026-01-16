@@ -38,7 +38,6 @@
       "obsidian"
       "orion"
       "plex"
-      "pocket-casts"
       "postman"
       "qbittorrent"
       "qlstephen"

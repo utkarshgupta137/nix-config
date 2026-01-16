@@ -63,7 +63,6 @@
         unzip
         xclip
 
-        pocket-casts
         qbittorrent
         signal-desktop
         sqlitebrowser
