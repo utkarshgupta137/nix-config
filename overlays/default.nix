@@ -11,6 +11,9 @@
     # example = prev.example.overrideAttrs (oldAttrs: rec {
     # ...
     # });
+    bottles = prev.bottles.override {
+      removeWarningPopup = true;
+    };
   };
 
   # When applied, the stable nixpkgs set (declared in the flake inputs) will

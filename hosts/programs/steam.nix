@@ -14,8 +14,9 @@
   };
 
   programs.gamemode.enable = true;
+  programs.gamescope.enable = true;
 
-  environment.systemPackages = [
-    pkgs.lutris
+  environment.systemPackages = with pkgs; [
+    bottles
   ];
 }
