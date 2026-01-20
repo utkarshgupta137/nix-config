@@ -17,8 +17,4 @@
     withPython3 = true;
     withRuby = true;
   };
-
-  home.file.".dprint.json" = {
-    source = ../../assets/dprint.json;
-  };
 }
