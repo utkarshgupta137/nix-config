@@ -15,45 +15,25 @@
     packages =
       with pkgs;
       [
-        awscli2
         cmake
-        go-migrate
-        grafana-loki
         neovim-remote
-        ssm-session-manager-plugin
-        zstd
 
-        bandwhich
-        bmon
-        dprint
-        just
         nixfmt-rfc-style
-        rm-improved
         sccache
         sd
         tokei
         tree-sitter
         uutils-coreutils-noprefix
         vivid
-        websocat
 
         rustup
         cargo-audit
-        cargo-cranky
-        cargo-criterion
         cargo-deny
-        cargo-hack
         cargo-machete
         cargo-nextest
-        cargo-pgo
         cargo-shear
-        cargo-show-asm
-        cargo-sweep
-        cargo-watch
       ]
       ++ lib.optionals pkgs.stdenv.isDarwin [
-        pinentry_mac
-
         cargo-flamegraph
       ]
       ++ lib.optionals pkgs.stdenv.isLinux [
@@ -65,22 +45,17 @@
 
         qbittorrent
         signal-desktop
-        sqlitebrowser
       ];
 
     preferXdgDirectories = true;
 
     sessionVariables = {
-      AWS_CLI_HISTORY_FILE = "${config.xdg.stateHome}/aws/history";
-      AWS_CONFIG_FILE = "${config.xdg.configHome}/aws/config";
       CARGO_HOME = "${config.xdg.dataHome}/cargo";
       CARGO_NET_GIT_FETCH_WITH_CLI = "true";
       CARGO_TARGET_DIR = "${config.xdg.cacheHome}/cargo";
-      DPRINT_CACHE_DIR = "${config.xdg.cacheHome}/dprint";
       GOPATH = "${config.xdg.dataHome}/go";
-      GRANTED_ALIAS_CONFIGURED = "true";
       IPYTHONDIR = "${config.xdg.dataHome}/ipython";
-      LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib:${pkgs.zlib}/lib";
+      LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
       LESSHISTFILE = "${config.xdg.stateHome}/less/history";
       MYPY_CACHE_DIR = "${config.xdg.cacheHome}/mypy";
       NPM_CONFIG_CACHE = "${config.xdg.cacheHome}/npm";
