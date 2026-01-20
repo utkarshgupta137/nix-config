@@ -79,17 +79,6 @@
             ./hosts/nixos/configuration.nix
           ];
         };
-
-        # Available through "nixos-rebuild --flake '.#utkarsh-dev' switch"
-        utkarsh-dev = linux.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [
-            # > Our main nixos configuration file <
-            ./hosts/ec2/configuration.nix
-          ];
-        };
       };
 
       # Darwin configuration entrypoint
@@ -118,18 +107,6 @@
           modules = [
             # > Our main home-manager configuration file <
             ./home/nixos/home.nix
-          ];
-        };
-
-        # Available through "home-manager --flake '.#utkarsh@utkarsh-dev' switch"
-        "utkarsh@utkarsh-dev" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.aarch64-linux; # Home-manager requires 'pkgs' instance
-          extraSpecialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [
-            # > Our main home-manager configuration file <
-            ./home/ec2/home.nix
           ];
         };
 
