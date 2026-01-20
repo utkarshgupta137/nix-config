@@ -13,7 +13,6 @@
     ./programs/bat.nix
     ./programs/delta.nix
     ./programs/fd.nix
-    ./programs/fzf.nix
     ./programs/htop.nix
     ./programs/jq.nix
     ./programs/lazygit.nix

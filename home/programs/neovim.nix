@@ -17,4 +17,8 @@
     withPython3 = true;
     withRuby = true;
   };
+
+  programs.fzf = {
+    enable = true;
+  };
 }
