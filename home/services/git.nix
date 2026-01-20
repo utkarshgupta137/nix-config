@@ -58,10 +58,10 @@
 
     includes = [
       {
-        condition = "gitdir:~/whistler/";
+        condition = "gitdir:~/cloudflare/";
         contents = {
           user = {
-            email = "utkarsh@whistlertrading.com";
+            email = "ugupta@cloudflare.com";
           };
         };
       }

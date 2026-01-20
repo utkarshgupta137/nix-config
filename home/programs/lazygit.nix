@@ -41,10 +41,6 @@
         editInTerminal = true;
       };
 
-      services = {
-        "whistler.ghe.com" = "github:whistler.ghe.com";
-      };
-
       quitOnTopLevelReturn = true;
       notARepository = "skip";
       promptToReturnFromSubprocess = false;
