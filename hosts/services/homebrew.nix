@@ -10,45 +10,16 @@
   homebrew = {
     enable = true;
 
-    taps = [
-      "vectordotdev/brew"
-    ];
-
-    brews = [
-      "graphviz"
-      "libomp"
-      "showkey"
-      "vectordotdev/brew/vector"
-    ];
-
     casks = [
       "1password"
       "alacritty"
       "bluesnooze"
-      "cloudflare-warp"
-      "db-browser-for-sqlite"
       "firefox"
-      "google-drive"
-      "iina"
       "itsycal"
-      "jupyterlab-app"
       "keyboardcleantool"
-      "linear-linear"
-      "notion"
       "obsidian"
       "orion"
-      "plex"
-      "postman"
-      "qbittorrent"
       "qlstephen"
-      "qlvideo"
-      "signal"
-      "slack"
-      "steam"
-      "tailscale-app"
-      "via"
-      "whatsapp"
-      "wireshark-app"
     ];
 
     global.brewfile = true;
