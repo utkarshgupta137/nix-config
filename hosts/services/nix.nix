@@ -38,8 +38,7 @@
           ];
 
           trusted-users = [
-            "root"
-            "@wheel"
+            "utkarsh"
           ];
 
           use-xdg-base-directories = true;
