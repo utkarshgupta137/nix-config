@@ -16,6 +16,7 @@
       "bluesnooze"
       "firefox"
       "itsycal"
+      "karabiner-elements"
       "keyboardcleantool"
       "obsidian"
       "orion"

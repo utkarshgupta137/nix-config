@@ -19,7 +19,6 @@
     ./services/fonts.nix
     # ./services/homebrew.nix
     # ./services/i18n.nix
-    # ./services/karabiner.nix
     # ./services/networking.nix
     ./services/nix.nix
     ./services/nixpkgs.nix

@@ -17,7 +17,6 @@
     # You can also split up your configuration and import pieces of it here:
     ../common.nix
     ../services/homebrew.nix
-    ../services/karabiner.nix
     ../services/networking.nix
     ./system.nix
   ];
