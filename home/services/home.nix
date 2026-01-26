@@ -10,7 +10,7 @@
   home = {
     enableNixpkgsReleaseCheck = true;
 
-    language.base = "en_IE.UTF-8";
+    language.base = "en_GB.UTF-8";
 
     packages =
       with pkgs;
