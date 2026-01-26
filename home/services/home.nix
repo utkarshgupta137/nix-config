@@ -21,6 +21,7 @@
         nixfmt
         sccache
         sd
+        statix
         tokei
         tree-sitter
         uutils-coreutils-noprefix
