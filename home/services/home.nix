@@ -51,12 +51,12 @@
         cargo-sweep
         cargo-watch
       ]
-      ++ lib.optionals (pkgs.stdenv.isDarwin) [
+      ++ lib.optionals pkgs.stdenv.isDarwin [
         pinentry_mac
 
         cargo-flamegraph
       ]
-      ++ lib.optionals (pkgs.stdenv.isLinux) [
+      ++ lib.optionals pkgs.stdenv.isLinux [
         gcc
         gnumake
         patchelf

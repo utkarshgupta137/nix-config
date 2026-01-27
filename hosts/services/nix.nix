@@ -47,7 +47,7 @@
         nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
       }
 
-      (lib.optionalAttrs (pkgs.stdenv.isLinux) {
+      (lib.optionalAttrs pkgs.stdenv.isLinux {
         # Opinionated: disable channels
         channel.enable = false;
       })

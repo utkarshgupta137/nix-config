@@ -10,10 +10,10 @@
   programs.alacritty = {
     enable = true;
 
-    package = lib.mkIf (pkgs.stdenv.isDarwin) null; # installed via brew
+    package = lib.mkIf pkgs.stdenv.isDarwin null; # installed via brew
 
     settings = {
-      window.option_as_alt = lib.mkIf (pkgs.stdenv.isDarwin) "Both";
+      window.option_as_alt = lib.mkIf pkgs.stdenv.isDarwin "Both";
 
       scrolling.history = 100000;
 
@@ -29,7 +29,7 @@
 
       selection.save_to_clipboard = true;
 
-      mouse.hide_when_typing = if (pkgs.stdenv.isDarwin) then true else false;
+      mouse.hide_when_typing = if pkgs.stdenv.isDarwin then true else false;
 
       keyboard.bindings = [
         {
@@ -100,7 +100,7 @@
           chars = "\\u001B[13;6u";
         }
       ]
-      ++ lib.optionals (pkgs.stdenv.isDarwin) [
+      ++ lib.optionals pkgs.stdenv.isDarwin [
         {
           key = "H";
           mods = "Alt|Shift";
@@ -144,7 +144,7 @@
           action = "CreateNewWindow";
         }
       ]
-      ++ lib.optionals (pkgs.stdenv.isLinux) [
+      ++ lib.optionals pkgs.stdenv.isLinux [
         {
           key = "C";
           mods = "Super";

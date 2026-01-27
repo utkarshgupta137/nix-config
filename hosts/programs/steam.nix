@@ -7,14 +7,16 @@
   ...
 }:
 {
-  programs.steam = {
-    enable = true;
-    gamescopeSession.enable = true;
-    extraCompatPackages = [ pkgs.proton-ge-bin ];
-  };
+  programs = {
+    steam = {
+      enable = true;
+      gamescopeSession.enable = true;
+      extraCompatPackages = [ pkgs.proton-ge-bin ];
+    };
 
-  programs.gamemode.enable = true;
-  programs.gamescope.enable = true;
+    gamemode.enable = true;
+    gamescope.enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
     bottles

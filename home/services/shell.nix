@@ -15,7 +15,7 @@
         TIME_STYLE = "long-iso";
       }
 
-      (lib.optionalAttrs (pkgs.stdenv.isDarwin) {
+      (lib.optionalAttrs pkgs.stdenv.isDarwin {
         XDG_RUNTIME_DIR = "${config.home.homeDirectory}/.local/run";
       })
     ];
