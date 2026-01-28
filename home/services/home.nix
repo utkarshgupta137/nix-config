@@ -66,6 +66,7 @@
       RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
       SCCACHE_DIR = "${config.xdg.cacheHome}/sccache";
       WAKATIME_HOME = "${config.xdg.dataHome}/wakatime";
+      _ZO_DATA_DIR = "${config.xdg.stateHome}/zoxide";
     };
 
     shellAliases = {
