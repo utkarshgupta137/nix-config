@@ -83,4 +83,11 @@
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
     stateVersion = "26.05";
   };
+
+  xdg = {
+    configFile.karabiner = lib.mkIf pkgs.stdenv.isDarwin {
+      source = ../../assets/karabiner;
+      recursive = true;
+    };
+  };
 }
