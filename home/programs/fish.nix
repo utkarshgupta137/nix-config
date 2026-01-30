@@ -14,8 +14,6 @@
     };
     shellInit = /* fish */ ''
       set -U fish_greeting
-
-      set -gx LS_COLORS $(vivid generate one-dark)
     '';
   };
 }

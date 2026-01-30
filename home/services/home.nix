@@ -24,7 +24,6 @@
         tokei
         tree-sitter
         uutils-coreutils-noprefix
-        vivid
 
         rustup
         cargo-audit

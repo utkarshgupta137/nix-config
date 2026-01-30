@@ -25,6 +25,7 @@
     ./programs/ripgrep.nix
     ./programs/starship.nix
     ./programs/uv.nix
+    ./programs/vivid.nix
     ./programs/zellij.nix
     ./programs/zoxide.nix
 
