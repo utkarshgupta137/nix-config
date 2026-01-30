@@ -9,6 +9,8 @@
 {
   environment = lib.mkMerge [
     {
+      enableAllTerminfo = true;
+
       etc.pythonrc.text = /* python */ ''
         def is_vanilla() -> bool:
             import sys
