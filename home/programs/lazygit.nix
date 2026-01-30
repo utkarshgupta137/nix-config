@@ -37,7 +37,7 @@
       };
 
       os = {
-        edit = "~/.config/lazygit/nvim.sh {{filename}}";
+        edit = "${config.home.homeDirectory}/.config/lazygit/nvim.sh {{filename}}";
         editInTerminal = true;
       };
 
@@ -47,7 +47,11 @@
     };
   };
 
-  xdg.configFile."lazygit/nvim.sh" = {
-    source = ../../assets/nvim.sh;
-  };
+  xdg.configFile."lazygit/nvim.sh".source = pkgs.writeShellScript "nvim.sh" /* sh */ ''
+    if [ "''${NVIM_LISTEN_ADDRESS + x}" != "" ] || [ "''${NVIM + x}" != "" ]; then
+      nvr --remote-wait "$1"
+    else
+      nvim "$1"
+    fi
+  '';
 }
