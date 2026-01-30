@@ -9,9 +9,52 @@
 {
   programs.starship = {
     enable = true;
-  };
+    presets = [
+      "bracketed-segments"
+      "nerd-font-symbols"
+    ];
+    settings = {
+      git_commit = {
+        tag_disabled = false;
+      };
 
-  xdg.configFile."starship.toml" = {
-    source = ../../assets/starship.toml;
+      git_metrics = {
+        disabled = false;
+        ignore_submodules = true;
+      };
+
+      git_status = {
+        ignore_submodules = true;
+      };
+
+      memory_usage = {
+        disabled = false;
+        threshold = 85;
+      };
+
+      nix_shell = {
+        heuristic = true;
+      };
+
+      shlvl = {
+        disabled = false;
+        threshold = 3;
+      };
+
+      status = {
+        disabled = false;
+        map_symbol = true;
+        pipestatus = true;
+      };
+
+      sudo = {
+        disabled = false;
+      };
+
+      time = {
+        disabled = false;
+        time_format = "%R";
+      };
+    };
   };
 }
