@@ -56,17 +56,6 @@
       };
     };
 
-    includes = [
-      {
-        condition = "gitdir:~/whistler/";
-        contents = {
-          user = {
-            email = "utkarsh@whistlertrading.com";
-          };
-        };
-      }
-    ];
-
     lfs = {
       enable = true;
     };

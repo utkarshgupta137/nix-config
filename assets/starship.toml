@@ -61,11 +61,6 @@ symbol = " "
 [directory]
 read_only = " 󰌾"
 
-[directory.substitutions]
-controller = "ctl"
-crosschain = "xc"
-galleon = "tfx"
-
 [direnv]
 format = "\\[[$symbol$loaded/$allowed]($style)\\]"
 
