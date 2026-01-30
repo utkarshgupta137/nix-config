@@ -20,6 +20,8 @@
     # You can also split up your configuration and import pieces of it here:
     ../common.nix
     ../programs/alacritty.nix
+    ../programs/docker-cli.nix
+    ../services/colima.nix
   ];
 
   home = {

@@ -13,6 +13,7 @@
     ./programs/bat.nix
     ./programs/cargo.nix
     ./programs/delta.nix
+    # ./programs/docker-cli.nix
     ./programs/fd.nix
     ./programs/fish.nix
     ./programs/go.nix
@@ -29,6 +30,7 @@
     ./programs/zellij.nix
     ./programs/zoxide.nix
 
+    # ./services/colima.nix
     ./services/git.nix
     ./services/gpg.nix
     ./services/home-manager.nix

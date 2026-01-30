@@ -34,6 +34,9 @@
         cargo-shear
       ]
       ++ lib.optionals pkgs.stdenv.isDarwin [
+        docker
+        docker-credential-helpers
+
         cargo-flamegraph
       ]
       ++ lib.optionals pkgs.stdenv.isLinux [
