@@ -19,6 +19,7 @@
     ./programs/go.nix
     ./programs/htop.nix
     ./programs/jq.nix
+    ./programs/lazydocker.nix
     ./programs/lazygit.nix
     ./programs/lsd.nix
     ./programs/neovim.nix
