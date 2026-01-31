@@ -54,7 +54,6 @@
         CARGO_BUILD_BUILD_DIR = "${config.xdg.cacheHome}/cargo";
         CARGO_HOME = "${config.xdg.dataHome}/cargo";
         CARGO_NET_GIT_FETCH_WITH_CLI = "true";
-        GOPATH = "${config.xdg.dataHome}/go";
         IPYTHONDIR = "${config.xdg.dataHome}/ipython";
         LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
         LESSHISTFILE = "${config.xdg.stateHome}/less/history";
