@@ -49,25 +49,33 @@
 
     preferXdgDirectories = true;
 
-    sessionVariables = {
-      CARGO_BUILD_BUILD_DIR = "${config.xdg.cacheHome}/cargo";
-      CARGO_HOME = "${config.xdg.dataHome}/cargo";
-      CARGO_NET_GIT_FETCH_WITH_CLI = "true";
-      GOPATH = "${config.xdg.dataHome}/go";
-      IPYTHONDIR = "${config.xdg.dataHome}/ipython";
-      LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
-      LESSHISTFILE = "${config.xdg.stateHome}/less/history";
-      MYPY_CACHE_DIR = "${config.xdg.cacheHome}/mypy";
-      NPM_CONFIG_CACHE = "${config.xdg.cacheHome}/npm";
-      PYTHONPYCACHEPREFIX = "${config.xdg.cacheHome}/python";
-      RUFF_CACHE_DIR = "${config.xdg.cacheHome}/ruff";
-      RUSTC_WRAPPER = "${pkgs.sccache}/bin/sccache";
-      RUSTUP_AUTO_INSTALL = "0";
-      RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
-      SCCACHE_DIR = "${config.xdg.cacheHome}/sccache";
-      WAKATIME_HOME = "${config.xdg.dataHome}/wakatime";
-      _ZO_DATA_DIR = "${config.xdg.stateHome}/zoxide";
-    };
+    sessionVariables = lib.mkMerge [
+      {
+        CARGO_BUILD_BUILD_DIR = "${config.xdg.cacheHome}/cargo";
+        CARGO_HOME = "${config.xdg.dataHome}/cargo";
+        CARGO_NET_GIT_FETCH_WITH_CLI = "true";
+        GOPATH = "${config.xdg.dataHome}/go";
+        IPYTHONDIR = "${config.xdg.dataHome}/ipython";
+        LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
+        LESSHISTFILE = "${config.xdg.stateHome}/less/history";
+        MYPY_CACHE_DIR = "${config.xdg.cacheHome}/mypy";
+        NPM_CONFIG_CACHE = "${config.xdg.cacheHome}/npm";
+        PYTHONPYCACHEPREFIX = "${config.xdg.cacheHome}/python";
+        RUFF_CACHE_DIR = "${config.xdg.cacheHome}/ruff";
+        RUSTC_WRAPPER = "${pkgs.sccache}/bin/sccache";
+        RUSTUP_AUTO_INSTALL = "0";
+        RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
+        SCCACHE_DIR = "${config.xdg.cacheHome}/sccache";
+        TIME_STYLE = "long-iso";
+        WAKATIME_HOME = "${config.xdg.dataHome}/wakatime";
+        XDG_BIN_HOME = "${config.home.homeDirectory}/.local/bin";
+        _ZO_DATA_DIR = "${config.xdg.stateHome}/zoxide";
+      }
+
+      (lib.optionalAttrs pkgs.stdenv.isDarwin {
+        XDG_RUNTIME_DIR = "${config.home.homeDirectory}/.local/run";
+      })
+    ];
 
     shellAliases = {
       l = "lsd -al";
@@ -86,6 +94,7 @@
   };
 
   xdg = {
+    enable = true;
     configFile.karabiner = lib.mkIf pkgs.stdenv.isDarwin {
       source = ../../assets/karabiner;
       recursive = true;

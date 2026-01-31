@@ -13,6 +13,7 @@
     ./programs/bat.nix
     ./programs/delta.nix
     ./programs/fd.nix
+    ./programs/fish.nix
     ./programs/go.nix
     ./programs/htop.nix
     ./programs/jq.nix
@@ -32,7 +33,6 @@
     ./services/nix-index.nix
     ./services/nix.nix
     ./services/nixpkgs.nix
-    ./services/shell.nix
     ./services/ssh.nix
   ];
 }
