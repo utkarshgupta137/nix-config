@@ -18,7 +18,7 @@
         cmake
         neovim-remote
 
-        nixfmt-rfc-style
+        nixfmt
         sccache
         sd
         tokei
