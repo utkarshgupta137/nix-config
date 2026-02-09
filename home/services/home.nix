@@ -16,6 +16,7 @@
       with pkgs;
       [
         cmake
+        git-subrepo
         neovim-remote
 
         nixfmt
