@@ -11,6 +11,7 @@
     # ./programs/alacritty.nix
     ./programs/atuin.nix
     ./programs/bat.nix
+    ./programs/cargo.nix
     ./programs/delta.nix
     ./programs/fd.nix
     ./programs/fish.nix

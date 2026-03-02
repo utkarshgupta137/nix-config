@@ -51,9 +51,6 @@
 
     sessionVariables = lib.mkMerge [
       {
-        CARGO_BUILD_BUILD_DIR = "${config.xdg.cacheHome}/cargo";
-        CARGO_HOME = "${config.xdg.dataHome}/cargo";
-        CARGO_NET_GIT_FETCH_WITH_CLI = "true";
         IPYTHONDIR = "${config.xdg.dataHome}/ipython";
         LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
         LESSHISTFILE = "${config.xdg.stateHome}/less/history";
@@ -61,7 +58,6 @@
         NODE_REPL_HISTORY = "${config.xdg.stateHome}/node/history";
         PYTHONPYCACHEPREFIX = "${config.xdg.cacheHome}/python";
         RUFF_CACHE_DIR = "${config.xdg.cacheHome}/ruff";
-        RUSTC_WRAPPER = "${pkgs.sccache}/bin/sccache";
         RUSTUP_AUTO_INSTALL = "0";
         RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
         SCCACHE_DIR = "${config.xdg.cacheHome}/sccache";
