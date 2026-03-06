@@ -16,6 +16,7 @@
       "--max-columns=250"
       "--max-columns-preview"
       "--smart-case"
+      "--sort=path"
     ];
   };
 }
