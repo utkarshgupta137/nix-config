@@ -84,8 +84,8 @@
       n = "nvim";
       nv = "nvim";
       j = "zellij";
-      jr = "zellij -l rsky attach -c rsky options --no-pane-frames";
-      jc = "zellij -l config attach -c config options --no-pane-frames";
+      jr = "zellij -l rsky attach -c rsky";
+      jc = "zellij -l config attach -c config";
     };
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
