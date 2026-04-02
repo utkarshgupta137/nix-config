@@ -10,6 +10,14 @@
   homebrew = {
     enable = true;
 
+    taps = [
+      "LouisBrunner/valgrind"
+    ];
+
+    brews = [
+      "LouisBrunner/valgrind/valgrind"
+    ];
+
     casks = [
       "1password"
       "alacritty"
