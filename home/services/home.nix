@@ -67,7 +67,6 @@
         SCCACHE_DIR = "${config.xdg.cacheHome}/sccache";
         TIME_STYLE = "long-iso";
         WAKATIME_HOME = "${config.xdg.dataHome}/wakatime";
-        XDG_BIN_HOME = "${config.home.homeDirectory}/.local/bin";
         _ZO_DATA_DIR = "${config.xdg.stateHome}/zoxide";
       }
 
@@ -94,6 +93,7 @@
 
   xdg = {
     enable = true;
+    localBinInPath = true;
     configFile.karabiner = lib.mkIf pkgs.stdenv.isDarwin {
       source = ../../assets/karabiner;
       recursive = true;
