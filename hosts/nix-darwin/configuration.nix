@@ -18,6 +18,7 @@
     ../common.nix
     ../services/homebrew.nix
     ../services/networking.nix
+    ../services/tailscale.nix
     ./system.nix
   ];
 }
