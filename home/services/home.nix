@@ -10,6 +10,14 @@
   home = {
     enableNixpkgsReleaseCheck = true;
 
+    file."Pictures/artemis-eclipse.jpg" = {
+      source = builtins.fetchurl {
+        name = "artemis-eclipse.jpg";
+        url = "https://images-assets.nasa.gov/image/art002e009301/art002e009301~orig.jpg";
+        sha256 = "15w63rbg1xb5rsqr2rh81qgx3q8ll71a8nwxbvsfw9ygfk6wnws0";
+      };
+    };
+
     language.base = "en_GB.UTF-8";
 
     packages =
