@@ -55,6 +55,8 @@
         unzip
         xclip
 
+        gnomeExtensions.battery-health-charging
+
         qbittorrent
         signal-desktop
       ];

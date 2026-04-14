@@ -13,5 +13,14 @@
       picture-uri-dark = "file://${config.home.homeDirectory}/Pictures/artemis-eclipse.jpg";
       picture-options = "zoom";
     };
+    "org/gnome/shell" = {
+      enabled-extensions = [
+        "Battery-Health-Charging@maniacx.github.com"
+      ];
+    };
+    "org/gnome/shell/extensions/Battery-Health-Charging" = {
+      charging-mode = "max";
+      show-system-indicator = false;
+    };
   };
 }
