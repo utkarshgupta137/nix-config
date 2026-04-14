@@ -32,6 +32,7 @@
     ./programs/zoxide.nix
 
     # ./services/colima.nix
+    # ./services/dconf.nix
     ./services/git.nix
     ./services/gpg.nix
     ./services/home-manager.nix
