@@ -56,6 +56,7 @@
         xclip
 
         gnomeExtensions.battery-health-charging
+        gnomeExtensions.lockscreen-extension
 
         qbittorrent
         signal-desktop

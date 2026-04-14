@@ -16,11 +16,15 @@
     "org/gnome/shell" = {
       enabled-extensions = [
         "Battery-Health-Charging@maniacx.github.com"
+        "lockscreen-extension@pratap.fastmail.fm"
       ];
     };
     "org/gnome/shell/extensions/Battery-Health-Charging" = {
       charging-mode = "max";
       show-system-indicator = false;
+    };
+    "org/gnome/shell/extensions/lockscreen-extension" = {
+      hide-lockscreen-extension-button = true;
     };
   };
 }
