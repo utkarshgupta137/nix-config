@@ -27,6 +27,7 @@
         git-subrepo
         neovim-remote
 
+        deadnix
         nixfmt
         sccache
         sd
