@@ -7,7 +7,7 @@
   # You can import other nix-darwin modules here
   imports = [
     # If you want to use modules your own flake exports (from modules/nix-darwin):
-    # outputs.nixDarwinModules.example
+    # inputs.self.nixDarwinModules.example
 
     # You can also split up your configuration and import pieces of it here:
     ../common.nix

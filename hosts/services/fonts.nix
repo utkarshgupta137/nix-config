@@ -11,8 +11,8 @@
         with pkgs;
         [ nerd-fonts.sauce-code-pro ]
         ++ lib.optionals pkgs.stdenv.isLinux [
-          inputs.apple-fonts.packages.${pkgs.system}.sf-pro
-          inputs.apple-fonts.packages.${pkgs.system}.ny
+          inputs.apple-fonts.packages.${pkgs.stdenv.hostPlatform.system}.sf-pro
+          inputs.apple-fonts.packages.${pkgs.stdenv.hostPlatform.system}.ny
         ];
     }
 

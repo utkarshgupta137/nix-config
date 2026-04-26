@@ -17,7 +17,7 @@
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     # Home manager
-    home-manager.url = "github:nix-community/home-manager/master";
+    home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # Apple fonts
@@ -26,7 +26,6 @@
 
   outputs =
     {
-      self,
       nixpkgs,
       linux,
       darwin,
@@ -34,7 +33,6 @@
       ...
     }@inputs:
     let
-      inherit (self) outputs;
       # Supported systems for your flake packages, shell, etc.
       systems = [
         "aarch64-linux"
@@ -71,9 +69,7 @@
       nixosConfigurations = {
         # Available through "nixos-rebuild --flake '.#utkarsh-nix' switch"
         utkarsh-nix = linux.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-          };
+          specialArgs = { inherit inputs; };
           modules = [
             # > Our main nixos configuration file <
             ./hosts/nixos/configuration.nix
@@ -86,9 +82,7 @@
         # Available through "darwin-rebuild --flake '.#utkarsh-mbp' switch"
         utkarsh-mbp = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
-          specialArgs = {
-            inherit inputs outputs;
-          };
+          specialArgs = { inherit inputs; };
           modules = [
             # > Our main nix-darwin configuration file <
             ./hosts/nix-darwin/configuration.nix
@@ -100,10 +94,9 @@
       homeConfigurations = {
         # Available through "home-manager --flake '.#utkarsh@utkarsh-nix' switch"
         "utkarsh@utkarsh-nix" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-          extraSpecialArgs = {
-            inherit inputs outputs;
-          };
+          # Home-manager requires 'pkgs' instance
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs; };
           modules = [
             # > Our main home-manager configuration file <
             ./home/nixos/home.nix
@@ -112,10 +105,9 @@
 
         # Available through "home-manager --flake '.#utkarsh@utkarsh-mbp' switch"
         "utkarsh@utkarsh-mbp" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.aarch64-darwin; # Home-manager requires 'pkgs' instance
-          extraSpecialArgs = {
-            inherit inputs outputs;
-          };
+          # Home-manager requires 'pkgs' instance
+          pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+          extraSpecialArgs = { inherit inputs; };
           modules = [
             # > Our main home-manager configuration file <
             ./home/nix-darwin/home.nix

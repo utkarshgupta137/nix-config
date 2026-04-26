@@ -1,4 +1,5 @@
 # This file defines overlays
+# These are arbitrary named and just some conventions I use, you can name then whenever and/or make as many as you want
 { inputs, ... }:
 {
   # This one brings our custom packages from the 'pkgs' directory
@@ -17,10 +18,10 @@
   };
 
   # When applied, the stable nixpkgs set (declared in the flake inputs) will
-  # be accessible through 'pkgs.stable'
+  # be accessible through 'pkgs.stablePkgs'
   stable-packages = final: _prev: {
-    stable = import inputs.nixpkgs-stable {
-      inherit (final) system;
+    stablePkgs = import inputs.nixpkgs-stable {
+      inherit (final.stdenv.hostPlatform) system;
       config.allowUnfree = true;
     };
   };
