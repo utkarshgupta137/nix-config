@@ -1,12 +1,4 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}:
-{
+_: {
   programs.fd = {
     enable = true;
     hidden = true;

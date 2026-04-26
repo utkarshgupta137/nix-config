@@ -1,12 +1,4 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}:
-{
+_: {
   programs.neovim = {
     enable = true;
     defaultEditor = true;

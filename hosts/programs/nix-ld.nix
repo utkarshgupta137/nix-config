@@ -1,12 +1,4 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}:
-{
+_: {
   programs.nix-ld = {
     enable = true;
   };

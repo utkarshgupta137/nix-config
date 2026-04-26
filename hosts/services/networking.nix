@@ -1,12 +1,4 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}:
-{
+_: {
   networking = {
     dns = [
       "1.1.1.1"

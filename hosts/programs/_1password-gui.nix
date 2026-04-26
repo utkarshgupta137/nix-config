@@ -1,12 +1,4 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}:
-{
+_: {
   programs._1password-gui = {
     enable = true;
     polkitPolicyOwners = [ "utkarsh" ];

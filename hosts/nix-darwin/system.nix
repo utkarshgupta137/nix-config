@@ -1,12 +1,4 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}:
-{
+_: {
   networking = {
     hostName = "utkarsh-mbp";
     localHostName = "utkarsh-mbp";

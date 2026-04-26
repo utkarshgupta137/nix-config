@@ -1,12 +1,4 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}:
-{
+_: {
   networking.hostName = "utkarsh-nix";
 
   nixpkgs.hostPlatform = "x86_64-linux";

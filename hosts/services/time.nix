@@ -1,12 +1,4 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}:
-{
+_: {
   time.hardwareClockInLocalTime = false;
 
   time.timeZone = "Europe/Dublin";
