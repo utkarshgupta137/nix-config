@@ -27,6 +27,23 @@
 
       colors.draw_bold_text_with_bright_colors = true;
 
+      bell = {
+        command =
+          if pkgs.stdenv.isDarwin then
+            {
+              program = "osascript";
+              args = [
+                "-e"
+                "beep"
+              ];
+            }
+          else
+            {
+              program = "pw-play";
+              args = [ "${pkgs.sound-theme-freedesktop}/share/sounds/freedesktop/stereo/bell.oga" ];
+            };
+      };
+
       selection.save_to_clipboard = true;
 
       mouse.hide_when_typing = if pkgs.stdenv.isDarwin then true else false;
