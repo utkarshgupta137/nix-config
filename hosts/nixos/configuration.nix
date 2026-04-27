@@ -25,11 +25,13 @@
     ../services/chrony.nix
     ../services/evremap.nix
     ../services/firewall.nix
+    ../services/fwupd.nix
     ../services/i18n.nix
     ../services/oomd.nix
     ../services/pipewire.nix
     ../services/plex.nix
     ../services/printing.nix
+    ../services/smartd.nix
     ../services/tailscale.nix
     ../services/time.nix
     ../services/virtualisation.nix

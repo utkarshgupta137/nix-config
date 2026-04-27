@@ -12,6 +12,7 @@
     # ./services/evremap.nix
     # ./services/firewall.nix
     ./services/fonts.nix
+    # ./services/fwupd.nix
     # ./services/homebrew.nix
     # ./services/i18n.nix
     # ./services/networking.nix
@@ -22,6 +23,7 @@
     # ./services/plex.nix
     # ./services/printing.nix
     ./services/shell.nix
+    # ./services/smartd.nix
     # ./services/tailscale.nix
     # ./services/time.nix
     # ./services/virtualisation.nix
