@@ -10,7 +10,10 @@
     package = lib.mkIf pkgs.stdenv.isDarwin null; # installed via brew
 
     settings = {
-      window.option_as_alt = lib.mkIf pkgs.stdenv.isDarwin "Both";
+      window = {
+        resize_increments = true;
+        option_as_alt = lib.mkIf pkgs.stdenv.isDarwin "Both";
+      };
 
       scrolling.history = 100000;
 
