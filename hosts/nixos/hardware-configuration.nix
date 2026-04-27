@@ -48,4 +48,6 @@
   swapDevices = [
     { device = "/dev/disk/by-uuid/231ab864-f35a-42c6-92c5-555ee5a7e52d"; }
   ];
+
+  zramSwap.enable = true;
 }
