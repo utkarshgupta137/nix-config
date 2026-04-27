@@ -1,6 +1,7 @@
 # This is your system's configuration file.
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
 {
+  inputs,
   ...
 }:
 {
@@ -12,6 +13,8 @@
     # Or modules from other flakes (such as nixos-hardware):
     # inputs.hardware.nixosModules.common-cpu-amd
     # inputs.hardware.nixosModules.common-ssd
+
+    inputs.nixos-hardware.nixosModules.lenovo-legion-16arha7
 
     # You can also split up your configuration and import pieces of it here:
     ../common.nix

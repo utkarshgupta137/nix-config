@@ -15,8 +15,6 @@ _: {
     autoRepeatDelay = 300;
     autoRepeatInterval = 15;
 
-    videoDrivers = [ "amdgpu" ];
-
     xkb = {
       layout = "us";
       variant = "";

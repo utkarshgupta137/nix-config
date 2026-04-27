@@ -12,6 +12,9 @@
     # NixOS
     linux.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    # Hardware-specific NixOS modules
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
+
     # Nix darwin
     darwin.url = "github:LnL7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
