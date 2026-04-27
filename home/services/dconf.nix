@@ -22,5 +22,9 @@
     "org/gnome/shell/extensions/lockscreen-extension" = {
       hide-lockscreen-extension-button = true;
     };
+    "org/gnome/shell/keybindings" = {
+      focus-active-notification = [ ];
+      toggle-message-tray = [ "<Super>m" ];
+    };
   };
 }
