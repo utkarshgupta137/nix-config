@@ -56,6 +56,7 @@
 
         gnomeExtensions.battery-health-charging
         gnomeExtensions.lockscreen-extension
+        lenovo-legion
 
         qbittorrent
         signal-desktop
