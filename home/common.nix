@@ -18,6 +18,7 @@
     ./programs/lazygit.nix
     ./programs/lsd.nix
     ./programs/neovim.nix
+    ./programs/nh.nix
     ./programs/npm.nix
     ./programs/ripgrep.nix
     ./programs/starship.nix
