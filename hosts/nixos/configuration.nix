@@ -21,7 +21,6 @@
     ../programs/_1password-gui.nix
     ../programs/firefox.nix
     ../programs/nix-ld.nix
-    ../programs/steam.nix
     ../services/chrony.nix
     ../services/evremap.nix
     ../services/firewall.nix
