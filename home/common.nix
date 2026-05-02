@@ -7,6 +7,7 @@
     ./programs/atuin.nix
     ./programs/bat.nix
     ./programs/cargo.nix
+    ./programs/comma.nix
     ./programs/delta.nix
     # ./programs/docker-cli.nix
     ./programs/fd.nix
