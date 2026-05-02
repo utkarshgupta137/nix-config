@@ -10,27 +10,34 @@
     # Also see the 'stable-packages' overlay at 'overlays/default.nix'.
 
     # NixOS
-    linux.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixos.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Hardware-specific NixOS modules
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
     # Nix darwin
-    darwin.url = "github:LnL7/nix-darwin";
-    darwin.inputs.nixpkgs.follows = "nixpkgs";
+    darwin = {
+      url = "github:nix-darwin/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Home manager
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Apple fonts
-    apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
+    apple-fonts = {
+      url = "github:Lyndeno/apple-fonts.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
     {
       nixpkgs,
-      linux,
+      nixos,
       darwin,
       home-manager,
       ...
@@ -71,7 +78,7 @@
       # NixOS configuration entrypoint
       nixosConfigurations = {
         # Available through "nixos-rebuild --flake '.#utkarsh-nix' switch"
-        utkarsh-nix = linux.lib.nixosSystem {
+        utkarsh-nix = nixos.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           modules = [
             # > Our main nixos configuration file <
