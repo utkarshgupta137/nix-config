@@ -33,7 +33,6 @@
     ./services/gpg.nix
     ./services/home-manager.nix
     ./services/home.nix
-    ./services/nix-index.nix
     ./services/nix.nix
     ./services/nixpkgs.nix
     ./services/ssh.nix
