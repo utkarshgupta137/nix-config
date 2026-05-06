@@ -23,15 +23,11 @@
         prune = true;
       };
 
-      format.pretty = "oneline";
-
       grep.lineNumber = true;
 
       init.defaultBranch = "main";
 
-      merge.conflictStyle = "diff3";
-
-      pager.grep = false;
+      merge.conflictStyle = "zdiff3";
 
       pull.rebase = true;
 
