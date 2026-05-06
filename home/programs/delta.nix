@@ -2,7 +2,7 @@ _: {
   programs.delta = {
     enable = true;
     options = {
-      features = "decorations";
+      hyperlinks = true;
       line-numbers = true;
       navigate = true;
 
