@@ -21,7 +21,7 @@
       };
 
       git = {
-        paging = [
+        pagers = [
           {
             pager = "delta --dark --paging=never";
           }
