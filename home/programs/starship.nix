@@ -7,6 +7,7 @@ _: {
     ];
     settings = {
       git_commit = {
+        only_detached = false;
         tag_disabled = false;
       };
 
