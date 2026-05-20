@@ -7,23 +7,22 @@
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-
-    matchBlocks = {
+    settings = {
       "*" = {
-        addKeysToAgent = "yes";
-        compression = true;
+        AddKeysToAgent = "yes";
+        Compression = true;
 
-        controlMaster = "auto";
-        controlPath = "~/.local/run/ssh/master-%r@%h:%p";
-        controlPersist = "10m";
+        ControlMaster = "auto";
+        ControlPath = "~/.local/run/ssh/master-%r@%h:%p";
+        ControlPersist = "10m";
 
-        identityAgent =
+        IdentityAgent =
           if pkgs.stdenv.isDarwin then
             "\"~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock\""
           else
             "~/.1password/agent.sock";
 
-        serverAliveInterval = 60;
+        ServerAliveInterval = 60;
       };
     };
   };
