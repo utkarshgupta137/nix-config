@@ -60,7 +60,6 @@
             "7"
             "8"
             "9"
-            "0"
           ];
           # Remap <mod>+<digit> -> Alt+<digit>
           digitBindings = map (n: {
