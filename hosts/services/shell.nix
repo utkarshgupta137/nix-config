@@ -9,30 +9,48 @@
       enableAllTerminfo = true;
 
       etc.pythonrc.text = /* python */ ''
-        def is_vanilla() -> bool:
-            import sys
-            return not hasattr(__builtins__, '__IPYTHON__') and 'bpython' not in sys.argv[0]
+        import sys
 
 
-        def setup_history():
-            import os
+        def _setup_history():
             import atexit
+            import os
             import readline
             from pathlib import Path
 
-            if state_home := os.environ.get('XDG_STATE_HOME'):
-                state_home = Path(state_home)
+            env_path = os.environ.get("PYTHON_HISTORY")
+            if env_path:
+                history_file = Path(env_path)
             else:
-                state_home = Path.home() / '.local' / 'state'
+                state_home = os.environ.get("XDG_STATE_HOME") or Path.home() / ".local" / "state"
+                history_file = Path(state_home) / "python" / "history"
 
-            history: Path = state_home / 'python' / 'history'
+            history_file.parent.mkdir(parents=True, exist_ok=True)
 
-            readline.read_history_file(str(history))
-            atexit.register(readline.write_history_file, str(history))
+            if history_file.is_file():
+                try:
+                    readline.read_history_file(history_file)
+                except OSError:
+                    pass
+
+            readline.set_history_length(10_000)
+
+            prev_length = readline.get_current_history_length()
+
+            def _save_history():
+                try:
+                    new_length = readline.get_current_history_length()
+                    readline.append_history_file(new_length - prev_length, str(history_file))
+                except OSError:
+                    pass
+
+            atexit.register(_save_history)
 
 
-        if is_vanilla():
-            setup_history()
+        if sys.version_info < (3, 13):
+            _setup_history()
+
+        del sys, _setup_history
       '';
 
       profiles = [ "\$HOME/.local/state/nix/profile" ];
