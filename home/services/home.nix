@@ -72,6 +72,7 @@
         MYPY_CACHE_DIR = "${config.xdg.cacheHome}/mypy";
         NODE_REPL_HISTORY = "${config.xdg.stateHome}/node/history";
         PYTHONPYCACHEPREFIX = "${config.xdg.cacheHome}/python";
+        PYTHON_HISTORY = "${config.xdg.stateHome}/python/history";
         RUFF_CACHE_DIR = "${config.xdg.cacheHome}/ruff";
         RUSTUP_AUTO_INSTALL = "0";
         RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
