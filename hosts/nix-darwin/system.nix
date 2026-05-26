@@ -61,6 +61,6 @@ _: {
 
     # Used for backwards compatibility, please read the changelog before changing.
     # $ darwin-rebuild changelog
-    stateVersion = 6;
+    stateVersion = 7;
   };
 }
