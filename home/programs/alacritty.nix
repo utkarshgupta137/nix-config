@@ -50,6 +50,8 @@
 
       keyboard.bindings =
         let
+          esc = builtins.fromJSON ''"\u001b"''; # ESC (0x1b)
+
           digits = [
             "1"
             "2"
@@ -65,7 +67,7 @@
           digitBindings = map (n: {
             key = "Key${n}";
             mods = if pkgs.stdenv.isDarwin then "Command" else "Control";
-            chars = "\\u001B${n}";
+            chars = "${esc}${n}";
           }) digits;
         in
         digitBindings
@@ -74,29 +76,29 @@
           {
             key = "Return";
             mods = "Shift";
-            chars = "\\u001B[13;2u";
+            chars = "${esc}[13;2u";
           }
           {
             key = "Return";
             mods = "Control";
-            chars = "\\u001B[13;5u";
+            chars = "${esc}[13;5u";
           }
           {
             key = "Return";
             mods = "Control|Shift";
-            chars = "\\u001B[13;6u";
+            chars = "${esc}[13;6u";
           }
         ]
         ++ lib.optionals pkgs.stdenv.isDarwin [
           {
             key = "T";
             mods = "Command";
-            chars = "\\u001BT";
+            chars = "${esc}T";
           }
           {
             key = "N";
             mods = "Command";
-            chars = "\\u001BN";
+            chars = "${esc}N";
           }
 
           {
@@ -136,12 +138,12 @@
           {
             key = "T";
             mods = "Super";
-            chars = "\\u001BT";
+            chars = "${esc}T";
           }
           {
             key = "N";
             mods = "Super";
-            chars = "\\u001BN";
+            chars = "${esc}N";
           }
 
           {
