@@ -70,10 +70,21 @@
         in
         digitBindings
         ++ [
+          # Ref: https://stackoverflow.com/questions/16359878/how-to-map-shift-enter
           {
             key = "Return";
             mods = "Shift";
-            chars = "\\u001B\\r";
+            chars = "\\u001B[13;2u";
+          }
+          {
+            key = "Return";
+            mods = "Control";
+            chars = "\\u001B[13;5u";
+          }
+          {
+            key = "Return";
+            mods = "Control|Shift";
+            chars = "\\u001B[13;6u";
           }
         ]
         ++ lib.optionals pkgs.stdenv.isDarwin [
