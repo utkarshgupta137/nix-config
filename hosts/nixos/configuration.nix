@@ -30,6 +30,7 @@
     ../services/pipewire.nix
     ../services/plex.nix
     ../services/printing.nix
+    ../services/resolved.nix
     ../services/smartd.nix
     ../services/tailscale.nix
     ../services/time.nix
