@@ -6,8 +6,6 @@
 {
   environment = lib.mkMerge [
     {
-      enableAllTerminfo = true;
-
       etc.pythonrc.text = /* python */ ''
         import sys
 
@@ -56,6 +54,8 @@
       profiles = [ "\$HOME/.local/state/nix/profile" ];
 
       shells = [ pkgs.fish ];
+
+      systemPackages = [ pkgs.alacritty.terminfo ];
 
       variables = {
         HISTFILE = "\$HOME/.local/state/bash/history";
