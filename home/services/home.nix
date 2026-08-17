@@ -76,6 +76,7 @@
         RUFF_CACHE_DIR = "${config.xdg.cacheHome}/ruff";
         RUSTUP_AUTO_INSTALL = "0";
         RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
+        SCCACHE_CACHE_SIZE = "50G";
         SCCACHE_DIR = "${config.xdg.cacheHome}/sccache";
         TIME_STYLE = "long-iso";
         WAKATIME_HOME = "${config.xdg.dataHome}/wakatime";
