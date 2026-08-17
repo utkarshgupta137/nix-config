@@ -41,13 +41,13 @@
         cargo-nextest
         cargo-shear
       ]
-      ++ lib.optionals pkgs.stdenv.isDarwin [
+      ++ lib.optionals pkgs.stdenv.hostPlatform.isDarwin [
         docker
         docker-credential-helpers
 
         cargo-flamegraph
       ]
-      ++ lib.optionals pkgs.stdenv.isLinux [
+      ++ lib.optionals pkgs.stdenv.hostPlatform.isLinux [
         gcc
         gnumake
         patchelf
@@ -82,7 +82,7 @@
         _ZO_DATA_DIR = "${config.xdg.stateHome}/zoxide";
       }
 
-      (lib.optionalAttrs pkgs.stdenv.isDarwin {
+      (lib.optionalAttrs pkgs.stdenv.hostPlatform.isDarwin {
         XDG_RUNTIME_DIR = "${config.home.homeDirectory}/.local/run";
       })
     ];
@@ -103,7 +103,7 @@
   xdg = {
     enable = true;
     localBinInPath = true;
-    configFile.karabiner = lib.mkIf pkgs.stdenv.isDarwin {
+    configFile.karabiner = lib.mkIf pkgs.stdenv.hostPlatform.isDarwin {
       source = ../../assets/karabiner;
       recursive = true;
     };

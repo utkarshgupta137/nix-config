@@ -34,7 +34,7 @@
       };
     }
 
-    (lib.optionalAttrs pkgs.stdenv.isLinux {
+    (lib.optionalAttrs pkgs.stdenv.hostPlatform.isLinux {
       # Opinionated: disable channels
       channel.enable = false;
     })

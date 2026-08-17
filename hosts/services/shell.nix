@@ -63,11 +63,11 @@
       };
     }
 
-    (lib.optionalAttrs pkgs.stdenv.isDarwin {
+    (lib.optionalAttrs pkgs.stdenv.hostPlatform.isDarwin {
       systemPath = [ "\$HOME/.local/bin" ];
     })
 
-    (lib.optionalAttrs pkgs.stdenv.isLinux {
+    (lib.optionalAttrs pkgs.stdenv.hostPlatform.isLinux {
       localBinInPath = true;
     })
   ];

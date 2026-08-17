@@ -7,12 +7,12 @@
   programs.alacritty = {
     enable = true;
 
-    package = lib.mkIf pkgs.stdenv.isDarwin null; # installed via brew
+    package = lib.mkIf pkgs.stdenv.hostPlatform.isDarwin null; # installed via brew
 
     settings = {
       window = {
         resize_increments = true;
-        option_as_alt = lib.mkIf pkgs.stdenv.isDarwin "Both";
+        option_as_alt = lib.mkIf pkgs.stdenv.hostPlatform.isDarwin "Both";
       };
 
       scrolling.history = 100000;
@@ -29,7 +29,7 @@
 
       bell = {
         command =
-          if pkgs.stdenv.isDarwin then
+          if pkgs.stdenv.hostPlatform.isDarwin then
             {
               program = "osascript";
               args = [
@@ -46,7 +46,7 @@
 
       selection.save_to_clipboard = true;
 
-      mouse.hide_when_typing = if pkgs.stdenv.isDarwin then true else false;
+      mouse.hide_when_typing = if pkgs.stdenv.hostPlatform.isDarwin then true else false;
 
       keyboard.bindings =
         let
@@ -66,7 +66,7 @@
           # Remap <mod>+<digit> -> Alt+<digit>
           digitBindings = map (n: {
             key = "Key${n}";
-            mods = if pkgs.stdenv.isDarwin then "Command" else "Control";
+            mods = if pkgs.stdenv.hostPlatform.isDarwin then "Command" else "Control";
             chars = "${esc}${n}";
           }) digits;
         in
@@ -89,7 +89,7 @@
             chars = "${esc}[13;6u";
           }
         ]
-        ++ lib.optionals pkgs.stdenv.isDarwin [
+        ++ lib.optionals pkgs.stdenv.hostPlatform.isDarwin [
           {
             key = "T";
             mods = "Command";
@@ -134,7 +134,7 @@
             action = "None";
           }
         ]
-        ++ lib.optionals pkgs.stdenv.isLinux [
+        ++ lib.optionals pkgs.stdenv.hostPlatform.isLinux [
           {
             key = "T";
             mods = "Super";

@@ -10,7 +10,7 @@
     homedir = "${config.xdg.dataHome}/gnupg";
   };
 
-  services.gpg-agent = lib.mkIf pkgs.stdenv.isLinux {
+  services.gpg-agent = lib.mkIf pkgs.stdenv.hostPlatform.isLinux {
     enable = true;
 
     defaultCacheTtl = 3600 * 24 * 365;

@@ -10,18 +10,18 @@
       packages =
         with pkgs;
         [ nerd-fonts.sauce-code-pro ]
-        ++ lib.optionals pkgs.stdenv.isLinux [
+        ++ lib.optionals pkgs.stdenv.hostPlatform.isLinux [
           inputs.apple-fonts.packages.${pkgs.stdenv.hostPlatform.system}.sf-pro
           inputs.apple-fonts.packages.${pkgs.stdenv.hostPlatform.system}.ny
         ];
     }
 
-    (lib.optionalAttrs pkgs.stdenv.isLinux {
+    (lib.optionalAttrs pkgs.stdenv.hostPlatform.isLinux {
       fontDir = {
         enable = true;
       };
 
-      fontconfig.defaultFonts = lib.mkIf pkgs.stdenv.isLinux {
+      fontconfig.defaultFonts = lib.mkIf pkgs.stdenv.hostPlatform.isLinux {
         emoji = [ "SauceCodePro Nerd Font" ];
         monospace = [ "SauceCodePro Nerd Font" ];
         sansSerif = [ "SF Pro" ];
