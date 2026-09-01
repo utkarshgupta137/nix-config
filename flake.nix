@@ -13,7 +13,7 @@
     nixos.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Hardware-specific NixOS modules
-    nixos-hardware.url = "github:NixOS/nixos-hardware";
+    nixos-hardware.url = "github:nixos/nixos-hardware";
 
     # Nix darwin
     darwin = {
