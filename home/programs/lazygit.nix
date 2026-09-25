@@ -31,6 +31,10 @@
         ignoreWhitespaceInDiffView = true;
         renameSimilarityThreshold = 20;
         overrideGpg = true;
+
+        log = {
+          order = "default";
+        };
       };
 
       os = {
