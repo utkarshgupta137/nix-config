@@ -3,7 +3,10 @@ _: {
     enable = true;
 
     taps = [
-      "LouisBrunner/valgrind"
+      {
+        name = "LouisBrunner/valgrind";
+        trusted = true;
+      }
     ];
 
     brews = [
