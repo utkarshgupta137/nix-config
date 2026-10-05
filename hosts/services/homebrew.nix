@@ -18,7 +18,6 @@ _: {
       "itsycal"
       "karabiner-elements"
       "keyboardcleantool"
-      "obsidian"
       "orion"
       "qlstephen"
       "wireshark-app"
