@@ -25,7 +25,7 @@
     ./programs/starship.nix
     ./programs/uv.nix
     ./programs/vivid.nix
-    ./programs/zellij.nix
+    # ./programs/zellij.nix
     ./programs/zoxide.nix
 
     # ./services/colima.nix

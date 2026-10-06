@@ -11,6 +11,7 @@ _: {
     ];
 
     brews = [
+      "zellij"
       "LouisBrunner/valgrind/valgrind"
     ];
 
