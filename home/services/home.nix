@@ -70,6 +70,7 @@
         LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
         LESSHISTFILE = "${config.xdg.stateHome}/less/history";
         MYPY_CACHE_DIR = "${config.xdg.cacheHome}/mypy";
+        NH_SHOW_ACTIVATION_LOGS = "1";
         NODE_REPL_HISTORY = "${config.xdg.stateHome}/node/history";
         PYTHONPYCACHEPREFIX = "${config.xdg.cacheHome}/python";
         PYTHON_HISTORY = "${config.xdg.stateHome}/python/history";
