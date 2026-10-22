@@ -5,6 +5,10 @@ _: {
 
     taps = [
       {
+        name = "open-tap/casks";
+        trusted = true;
+      }
+      {
         name = "LouisBrunner/valgrind";
         trusted = true;
       }
@@ -17,7 +21,7 @@ _: {
 
     casks = [
       "1password"
-      "alacritty"
+      "open-tap/casks/alacritty"
       "bluesnooze"
       "firefox"
       "itsycal"
