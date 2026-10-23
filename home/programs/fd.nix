@@ -1,6 +1,10 @@
 _: {
   programs.fd = {
     enable = true;
-    hidden = true;
+    extraOptions = [
+      "--follow"
+      "--exclude=.git/"
+      "--hidden"
+    ];
   };
 }
