@@ -27,6 +27,8 @@
 
       init.defaultBranch = "main";
 
+      log.follow = true;
+
       merge.conflictStyle = "zdiff3";
 
       pull.rebase = true;
